@@ -4,7 +4,7 @@ function home(navigateTo) {
   const title = document.createElement('h2');
   const button = document.createElement('button');
 
-  button.textContent = 'login';
+  button.textContent = 'register';
   button.addEventListener('click', () => {
     navigateTo('/login');
   });

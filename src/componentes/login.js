@@ -1,4 +1,4 @@
-import controlador from "../lib/controlador";
+import { controlador } from '../lib/controlador';
 
 function login(navigateTo) {
   const section = document.createElement('section');
@@ -32,4 +32,3 @@ function login(navigateTo) {
   return section;
 }
 export default login;
-
