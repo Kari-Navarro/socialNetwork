@@ -2,11 +2,9 @@
 import home from './componentes/home.js';
 import login from './componentes/login.js';
 import error from './componentes/error.js';
-//import { getAuth, signInWithRedirect } from 'firebase/auth';
+// import { getAuth, signInWithRedirect } from 'firebase/auth';
 
-
-
-//const auth
+// const auth
 
 const routes = [
   { path: '/', component: home },
@@ -43,7 +41,4 @@ navigateTo(window.location.pathname || defaultRoute);
 
 const App = () => ({});
 
-
-export default App;
-export { navigateTo };
-
+export { App, navigateTo };
