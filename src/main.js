@@ -1,9 +1,12 @@
 // Este es el punto de entrada de tu aplicacion
-import home from './home.js';
-import login from './login.js';
-import error from './error.js';
+import home from './componentes/home.js';
+import login from './componentes/login.js';
+import error from './componentes/error.js';
+//import { getAuth, signInWithRedirect } from 'firebase/auth';
 
-import { myFunction } from './lib/index.js';
+
+
+//const auth
 
 const routes = [
   { path: '/', component: home },
@@ -40,7 +43,7 @@ navigateTo(window.location.pathname || defaultRoute);
 
 const App = () => ({});
 
-myFunction();
 
 export default App;
 export { navigateTo };
+
