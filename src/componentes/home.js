@@ -2,16 +2,25 @@
 function home(navigateTo) {
   const section = document.createElement('section');
   const title = document.createElement('h2');
-  const button = document.createElement('button');
+  const buttonRegister = document.createElement('button');
+  const buttonLogin = document.createElement('button');
 
-  button.textContent = 'register';
-  button.addEventListener('click', () => {
+  buttonRegister.classList.add('btn-register');
+  buttonRegister.textContent = 'Register';
+  buttonRegister.addEventListener('click', () => {
+    navigateTo('/register');
+  });
+
+  buttonLogin.classList.add('btn-login');
+  buttonLogin.textContent = 'Login';
+  buttonLogin.addEventListener('click', () => {
     navigateTo('/login');
   });
 
+
   title.textContent = 'Petslife';
 
-  section.append(title, button);
+  section.append(title, buttonRegister, buttonLogin);
   return section;
 }
 

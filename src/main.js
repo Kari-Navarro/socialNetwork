@@ -1,15 +1,17 @@
 // Este es el punto de entrada de tu aplicacion
 import home from './componentes/home.js';
-import login from './componentes/login.js';
+import register from './componentes/register.js';
 import error from './componentes/error.js';
+import login from './componentes/login.js';
 // import { getAuth, signInWithRedirect } from 'firebase/auth';
 
 // const auth
 
 const routes = [
   { path: '/', component: home },
-  { path: '/login', component: login },
+  { path: '/register', component: register },
   { path: '/error', component: error },
+  { path: '/login', component: login },
 ];
 const defaultRoute = '/';
 const root = document.getElementById('root');

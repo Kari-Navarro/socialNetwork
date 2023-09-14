@@ -1,23 +1,37 @@
 // aqui exportaras las funciones que necesites
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase.js';
 
 /* getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect,
 getRedirectResult,signInWithEmailAndPassword, */
 
+const updateOutput = (outputElement, message) => {
+  if (outputElement) {
+    outputElement.textContent = message;
+  }
+};
+
 function registrarConEmail(email, password) {
   return createUserWithEmailAndPassword(auth, email, password);
 }
 
-/* signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-    // ...
-  })
+const loginUser = (email, password, element) => signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => userCredential)
   .catch((error) => {
     const errorCode = error.code;
-    const errorMessage = error.message;
-  }); */
+    if (errorCode === 'auth/invalid-email') {
+      const message = 'The email is not valid.';
+      updateOutput(element, message);
+    } else if (errorCode === 'auth/user-disabled') {
+      const message = 'User has been disabled.';
+      updateOutput(element, message);
+    } else if (errorCode === 'auth/user-not-found') {
+      const message = 'User not found';
+      updateOutput(element, message);
+    } else if (errorCode === 'auth/wrong-password') {
+      const message = 'Wrong password';
+      updateOutput(element, message);
+    }
+  });
 
-export { registrarConEmail };
+export { registrarConEmail, loginUser };
