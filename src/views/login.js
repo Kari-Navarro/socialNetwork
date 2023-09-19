@@ -1,6 +1,6 @@
 // boton de google 
 
-import { controlador } from '../lib/controlador';
+import { controlador } from '../lib/controlador.js';
 
 function login(navigateTo) {
   const section = document.createElement('section');
@@ -24,8 +24,8 @@ function login(navigateTo) {
     navigateTo('/');
   });
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    controlador.registrar(inputEmail.value, inputPass.value);
+
+    controlador.registrar(inputEmail.value, inputPass.value)
   });
 
   form.append(inputEmail, inputPass, buttonLogin);
