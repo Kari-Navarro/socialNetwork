@@ -1,5 +1,5 @@
 // aqui exportaras las funciones que necesites
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from './firebase.js';
 
 /* getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect,
@@ -10,6 +10,7 @@ const updateOutput = (outputElement, message) => {
     outputElement.textContent = message;
   }
 };
+//const loginWithGoogle = new GoogleAuthProvider();
 
 function registrarConEmail(email, password) {
   return createUserWithEmailAndPassword(auth, email, password);

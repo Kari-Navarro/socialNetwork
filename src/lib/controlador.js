@@ -1,17 +1,10 @@
-import { registrarConEmail, loginUser } from '../firebase/index';
+import { registrarConEmail, loginUser } from '../firebase/auth';
 // aqui importamos las funciones de firebase y exportamos a la vista para que se puedan utilizar
 export const controlador = {
   registrar: (email, password) => {
-    registrarConEmail(email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        return user;
-      })
-      .catch((error) => {
-      // const errorCode = error.code;
-        const errorMessage = error.message;
-        return errorMessage;
-      });
+  
+    return registrarConEmail(email, password)
+      
   },
 
 };
