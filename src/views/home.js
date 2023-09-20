@@ -1,26 +1,27 @@
 // file home.js
-import logo from '../views/logo.png';
-
+import logo from './logo.png';
+import img2 from './img2.jpg';
 
 function home(navigateTo) {
   const section = document.createElement('section');
-  const title = document.createElement('h2');
+  const div = document.createElement('div');
+  div.classList.add('btns-div');
   const buttonRegister = document.createElement('button');
   const buttonLogin = document.createElement('button');
+  const fondo = document.createElement('img');
+  fondo.classList.add('img2');
+  fondo.src = img2;
+  fondo.alt = 'img fondo';
+  const img1 = document.createElement('img');
+  img1.classList.add('img1');
+  img1.src = logo;
+  img1.alt = 'logo petslife';
+  img1.classList.add('logo');
 
   buttonRegister.classList.add('btn-register');
   buttonRegister.textContent = 'Register';
   buttonRegister.addEventListener('click', () => {
-    const img1 = document.createElement('img');
-    img1.classList.add('img1');
-    img1.src = logo;
-    img1.alt = 'logo petslife';
-
     navigateTo('/register');
-
-
-
-    
   });
 
   buttonLogin.classList.add('btn-login');
@@ -28,10 +29,10 @@ function home(navigateTo) {
   buttonLogin.addEventListener('click', () => {
     navigateTo('/login');
   });
-
-
-  title.textContent = 'Petslife';
-  section.append(title, buttonRegister, buttonLogin, img1);
+  div.append(buttonRegister, buttonLogin);
+  section.appendChild(fondo);
+  section.appendChild(img1);
+  section.appendChild(div);
   return section;
 }
 
