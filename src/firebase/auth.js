@@ -5,16 +5,17 @@ import { auth } from './firebase.js';
 /* getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect,
 getRedirectResult,signInWithEmailAndPassword, */
 
+// const loginWithGoogle = new GoogleAuthProvider();
+
+function registrarConEmail(email, password) {
+  return createUserWithEmailAndPassword(auth, email, password);
+}
+
 const updateOutput = (outputElement, message) => {
   if (outputElement) {
     outputElement.textContent = message;
   }
 };
-//const loginWithGoogle = new GoogleAuthProvider();
-
-function registrarConEmail(email, password) {
-  return createUserWithEmailAndPassword(auth, email, password);
-}
 
 const loginUser = (email, password, element) => signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => userCredential)
@@ -34,5 +35,4 @@ const loginUser = (email, password, element) => signInWithEmailAndPassword(auth,
       updateOutput(element, message);
     }
   });
-
 export { registrarConEmail, loginUser };

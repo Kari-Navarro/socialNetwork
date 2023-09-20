@@ -1,6 +1,6 @@
-// boton de google 
+// boton de google
 
-import { controlador } from '../lib/controlador.js';
+import { loginUser } from '../firebase/auth.js';
 
 function login(navigateTo) {
   const section = document.createElement('section');
@@ -23,9 +23,9 @@ function login(navigateTo) {
   buttonReturn.addEventListener('click', () => {
     navigateTo('/');
   });
-  form.addEventListener('submit', (e) => {
 
-    controlador.registrar(inputEmail.value, inputPass.value)
+  form.addEventListener('submit', () => {
+    loginUser(inputEmail.value, inputPass.value);
   });
 
   form.append(inputEmail, inputPass, buttonLogin);
