@@ -1,4 +1,6 @@
-function form(navigateTo) {
+function dogRegister(navigateTo) {
+  // if(user.paw){
+  // navugate(/feed)}
   const section = document.createElement('section');
   const title = document.createElement('h2');
   const buttonReturn = document.createElement('button');
@@ -34,16 +36,17 @@ function form(navigateTo) {
   buttonReturn.addEventListener('click', () => {
     navigateTo('/');
   });
-  form.addEventListener('submit', (e) => {
+  dogForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    // loginUser(e.inputEmail.value, e.inputPass.value);
     dogForm(
-      dogId.value,
-      age.value,
-      gender.value,
-      dogBread.value,
-      weight.value,
-      vaccines.value,
-      sterilized.value,
+      inputId.value,
+      inputAge.value,
+      inputGender.value,
+      inputDogBread.value,
+      inputWeight.value,
+      inputVaccines.value,
+      inputSterilized.value,
     )
       .then((userCredential) => {
         const user = userCredential.user;
@@ -56,7 +59,7 @@ function form(navigateTo) {
         return errorMessage;
       });
   });
-  form.append(
+  dogForm.append(
     inputId,
     inputAge,
     inputGender,
@@ -70,4 +73,4 @@ function form(navigateTo) {
 
   return section;
 }
-export default form;
+export default dogRegister;
