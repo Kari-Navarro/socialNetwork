@@ -1,6 +1,6 @@
 // boton de google
 
-import { loginUser } from '../firebase/auth.js';
+import { loginUser, loginWithGoogle } from '../firebase/auth.js';
 
 function login(navigateTo) {
   const section = document.createElement('section');
@@ -10,6 +10,7 @@ function login(navigateTo) {
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
   const buttonLogin = document.createElement('button');
+  const buttonGoogle = document.createElement('button');
 
   inputEmail.placeholder = 'Write email';
   inputEmail.type = 'email';
@@ -18,10 +19,19 @@ function login(navigateTo) {
 
   title.textContent = 'login';
   buttonLogin.textContent = 'Login';
+  buttonGoogle.textContent = 'Google';
 
   buttonReturn.textContent = 'Return to home';
   buttonReturn.addEventListener('click', () => {
     navigateTo('/');
+  });
+
+  buttonGoogle.addEventListener('click', async () => {
+    // Invocamos a la funcion loginWithGoogle que abre el popup de google
+    const user = await loginWithGoogle();
+    if (user !== undefined) {
+      navigateTo('/dogform');
+    }
   });
 
   form.addEventListener('submit', () => {
@@ -29,7 +39,7 @@ function login(navigateTo) {
   });
 
   form.append(inputEmail, inputPass, buttonLogin);
-  section.append(title, form, buttonReturn);
+  section.append(title, form, buttonReturn, buttonGoogle);
 
   return section;
 }

@@ -1,6 +1,6 @@
 // file home.js
 import logo from './logo.png';
-import img2 from './img2.jpg';
+import back from './back.jpg';
 
 function home(navigateTo) {
   const section = document.createElement('section');
@@ -10,7 +10,7 @@ function home(navigateTo) {
   const buttonLogin = document.createElement('button');
   const fondo = document.createElement('img');
   fondo.classList.add('img2');
-  fondo.src = img2;
+  fondo.src = back;
   fondo.alt = 'img fondo';
   const img1 = document.createElement('img');
   img1.classList.add('img1');
