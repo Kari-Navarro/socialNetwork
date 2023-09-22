@@ -6,65 +6,90 @@ function dogRegister(navigateTo) {
   // }
   const section = document.createElement('section');
   const title = document.createElement('h2');
+
   const buttonReturn = document.createElement('button');
+  buttonReturn.classList.add("buttonReturn");
+
   const buttonSubmit = document.createElement('button');
+  buttonSubmit.classList.add("buttonSubmit");
+
   const dogForm = document.createElement('form');
+  dogForm.classList.add("dogForm");
+
   const inputId = document.createElement('input');
-  const inputAge = document.createElement('input');
-  const inputGender = document.createElement('input');
-  const inputDogBreed = document.createElement('input');
-  const inputWeight = document.createElement('input');
-  const inputVaccinesY = document.createElement('input');
-  const inputVaccinesN = document.createElement('input');
-  const inputSterilizedY = document.createElement('input');
-  const inputSterilizedN = document.createElement('input');
-  const labelId = document.createElement('label');
-  const labelAge = document.createElement('label');
-  const labelGender = document.createElement('label');
-  const labelBreed = document.createElement('label');
-  const labelWeight = document.createElement('label');
-  const labelVaccines = document.createElement('label');
-  const labelVaccinesY = document.createElement('label');
-  const labelVaccinesN = document.createElement('label');
-  const labelSterilized = document.createElement('label');
-  const labelSterilizedY = document.createElement('label');
-  const labelSterilizedN = document.createElement('label');
-
-  labelId.textContent = 'Dog name: ';
+  inputId.classList.add("inputId");
   inputId.placeholder = 'Dog ID';
-  inputId.type = 'name';
+  inputId.type = 'text';
 
-  labelAge.textContent = 'Age: ';
+  const inputAge = document.createElement('input');
+  inputAge.classList.add("inputAge");
   inputAge.placeholder = 'Age';
   inputAge.type = 'number';
 
-  labelGender.textContent = 'Gender: ';
-  inputGender.placeholder = 'Male or Female';
+  const inputGender = document.createElement('input');
+  inputGender.classList.add("inputGender");
+  inputGender.placeholder = 'Gender: Male or Female';
   inputGender.type = 'text';
 
-  labelBreed.textContent = 'Breed: ';
+  const inputDogBreed = document.createElement('input');
+  inputDogBreed.classList.add("inputDogBreed");
   inputDogBreed.placeholder = 'Dog Breed';
   inputDogBreed.type = 'text';
 
-  labelWeight.textContent = 'Weight: ';
+  const inputWeight = document.createElement('input');
+  inputWeight.classList.add("inputWeight");
   inputWeight.placeholder = 'Kg.';
   inputWeight.type = 'number';
 
+  const labelVaccines = document.createElement('label');
+
+  const labelVaccinesY = document.createElement('label');
+  const inputVaccinesY = document.createElement('input');
+  inputVaccinesY.classList.add("inputVaccinesY");
+
+  const labelVaccinesN = document.createElement('label');
+  const inputVaccinesN = document.createElement('input');
+  inputVaccinesN.classList.add("inputVaccinesN");
+
+  const labelSterilized = document.createElement('label');
+  
+  const labelSterilizedY = document.createElement('label');
+  const inputSterilizedY = document.createElement('input');
+  inputSterilizedY.classList.add("inputSterilizedY");
+
+  const labelSterilizedN = document.createElement('label');
+  const inputSterilizedN = document.createElement('input');
+  inputSterilizedN.classList.add("inputSterilizedN");
+
   labelVaccines.textContent = 'Vaccines: ';
+  labelVaccines.classList.add("labelVaccines");
   labelVaccinesY.textContent = 'Yes';
+  labelVaccinesY.classList.add("radio");
   inputVaccinesY.type = 'radio';
+  inputVaccinesY.name = 'vaccineStatus';
   labelVaccinesN.textContent = 'No';
+  inputVaccinesN.name = 'vaccineStatus';
+  labelVaccinesN.classList.add("radio");
   inputVaccinesN.type = 'radio';
 
   labelSterilized.textContent = 'Sterilized: ';
+  labelSterilized.classList.add("labelSterilized");
   labelSterilizedY.textContent = 'Yes';
+  labelSterilizedY.classList.add("radio");
   inputSterilizedY.type = 'radio';
+  inputSterilizedY.name = 'sterilizedStatus';
   labelSterilizedN.textContent = 'No';
+  labelSterilizedN.classList.add("radio");
   inputSterilizedN.type = 'radio';
+  inputSterilizedN.name = 'sterilizedStatus';
 
   title.textContent = 'My Pet';
+  title.classList.add("my-Pet");
 
   buttonSubmit.textContent = 'Submit';
+  buttonSubmit.classList.add("buttonSubmit");
+
+  buttonReturn.classList.add("buttonReturn");
 
   buttonReturn.textContent = 'Return';
   buttonReturn.addEventListener('click', () => {
@@ -98,15 +123,10 @@ function dogRegister(navigateTo) {
   //   });
 
   dogForm.append(
-    labelId,
     inputId,
-    labelAge,
     inputAge,
-    labelGender,
     inputGender,
-    labelBreed,
     inputDogBreed,
-    labelWeight,
     inputWeight,
     labelVaccines,
     labelVaccinesY,
