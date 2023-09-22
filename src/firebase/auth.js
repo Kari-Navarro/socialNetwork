@@ -67,6 +67,37 @@ function loginUser(email, password, element) {
     });
 }
 
+// funcion que comparito el coach
+// Importa Firebase y configura la inicialización
+// const firebase = require("firebase");
+// const firebaseConfig = {
+//   apiKey: "TU_API_KEY",
+//   authDomain: "TU_DOMINIO.firebaseapp.com",
+//   databaseURL: "https://TU_DOMINIO.firebaseio.com",
+//   projectId: "TU_PROYECTO_ID",
+//   storageBucket: "TU_BUCKET.appspot.com",
+//   messagingSenderId: "TU_MENSAJERÍA_SENDER_ID",
+//   appId: "TU_APP_ID"
+// };
+// firebase.initializeApp(firebaseConfig);
+
+// // Autenticación del usuario (puedes usar diferentes métodos aquí)
+// const user = firebase.auth().currentUser;
+
+// // Actualizar el nombre del usuario
+// if (user) {
+//   user.updateProfile({
+//     displayName: "NuevoNombre"
+//   })
+//   .then(function() {
+//     // Actualización exitosa
+//     console.log("Nombre de usuario actualizado con éxito");
+//   })
+//   .catch(function(error) {
+//     // Error en la actualización
+//     console.error("Error al actualizar el nombre de usuario:", error);
+//   });
+// }
 export {
   registrarConEmail, loginUser, loginWithGoogle,
 };
