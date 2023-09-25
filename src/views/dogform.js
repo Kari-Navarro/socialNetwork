@@ -1,3 +1,5 @@
+import imgDogForm from './img3.jpg'
+
 function dogRegister(navigateTo) {
   // if (user.pet) {
   //   navigateTo('/feed');
@@ -6,6 +8,11 @@ function dogRegister(navigateTo) {
   // }
   const section = document.createElement('section');
   const title = document.createElement('h2');
+  const img3 = document.createElement('img');
+  img3.classList.add('img3');
+  img3.src = imgDogForm;
+  img3.alt = 'img Dog Form';
+  img3.classList.add('imgDogForm');
 
   const buttonReturn = document.createElement('button');
   buttonReturn.classList.add("buttonReturn");
@@ -38,7 +45,7 @@ function dogRegister(navigateTo) {
 
   const inputWeight = document.createElement('input');
   inputWeight.classList.add("inputWeight");
-  inputWeight.placeholder = 'Kg.';
+  inputWeight.placeholder = 'Weight';
   inputWeight.type = 'number';
 
   const labelVaccines = document.createElement('label');
@@ -52,7 +59,7 @@ function dogRegister(navigateTo) {
   inputVaccinesN.classList.add("inputVaccinesN");
 
   const labelSterilized = document.createElement('label');
-  
+
   const labelSterilizedY = document.createElement('label');
   const inputSterilizedY = document.createElement('input');
   inputSterilizedY.classList.add("inputSterilizedY");
@@ -61,6 +68,8 @@ function dogRegister(navigateTo) {
   const inputSterilizedN = document.createElement('input');
   inputSterilizedN.classList.add("inputSterilizedN");
 
+  const divVaccines = document.createElement("div");
+  divVaccines.classList.add("divVaccines");
   labelVaccines.textContent = 'Vaccines: ';
   labelVaccines.classList.add("labelVaccines");
   labelVaccinesY.textContent = 'Yes';
@@ -72,6 +81,8 @@ function dogRegister(navigateTo) {
   labelVaccinesN.classList.add("radio");
   inputVaccinesN.type = 'radio';
 
+  const divSterilized = document.createElement("div");
+  divSterilized.classList.add("divSterilized");
   labelSterilized.textContent = 'Sterilized: ';
   labelSterilized.classList.add("labelSterilized");
   labelSterilizedY.textContent = 'Yes';
@@ -83,8 +94,8 @@ function dogRegister(navigateTo) {
   inputSterilizedN.type = 'radio';
   inputSterilizedN.name = 'sterilizedStatus';
 
-  title.textContent = 'My Pet';
-  title.classList.add("my-Pet");
+  title.textContent = 'my pet';
+  title.classList.add("my-pet");
 
   buttonSubmit.textContent = 'Submit';
   buttonSubmit.classList.add("buttonSubmit");
@@ -111,7 +122,7 @@ function dogRegister(navigateTo) {
     return myPet;
   });
 
-   //.then((userCredential) => {
+  //.then((userCredential) => {
   // const user = userCredential.user;
   //   navigateTo('/feed');// CREAR CARPETA DEL FEED
   //   return user;
@@ -121,27 +132,33 @@ function dogRegister(navigateTo) {
   //     const errorMessage = error.message;
   //     return errorMessage;
   //   });
-
-  dogForm.append(
-    inputId,
-    inputAge,
-    inputGender,
-    inputDogBreed,
-    inputWeight,
+  divVaccines.append(
     labelVaccines,
     labelVaccinesY,
     inputVaccinesY,
     labelVaccinesN,
-    inputVaccinesN,
+    inputVaccinesN)
+  divSterilized.append(
     labelSterilized,
     labelSterilizedY,
     inputSterilizedY,
     labelSterilizedN,
     inputSterilizedN,
+  )
+  dogForm.append(
+    img3,
+    inputId,
+    inputAge,
+    inputGender,
+    inputDogBreed,
+    inputWeight,
+    divVaccines,
+    divSterilized,
     buttonSubmit,
   );
   section.append(
     title,
+    img3,
     dogForm,
     buttonReturn,
   );

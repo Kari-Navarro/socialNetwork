@@ -3,114 +3,178 @@ section {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;*/
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 10px;
+  /*justify-content: space-between;*/
 }
 
-
+.dogForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 @media (min-width: 390px) {
-    body {
-      margin: 0;
-    }
-  
-    .logo {
-      width: 80%;
-      height: 80%;
-      margin-left: 15%;
-      margin-right: 15%;
-      position: relative; /* Añade posición relativa */
-      z-index: 2; /* Coloca la imagen del logo y los botones por encima de la imagen de fondo */
-      margin-top: 1em;
-    }
-  
-    .btns-div {
-      display: flex;
-      justify-content: center;
-      align-content: flex-start;
-      margin-top: 27em;
-      position: relative; /* Añade posición relativa */
-      z-index: 2; /* Coloca la imagen del logo y los botones por encima de la imagen de fondo */
-    }
-  
-    .btn-register {
-      background-color: #F4D160;
-      border-radius: 3em;
-      border: 1px solid;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 180%;
-      margin-right: 3em;
-    }
-  
-    .btn-login {
-      background-color: #75C2F6;
-      border: 1px solid;
-      border-radius: 3em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 180%;
-    }
-  
-    .img2 {
-      position: absolute; /* Añade posición absoluta para que la imagen de fondo cubra todo el contenedor */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1; /* Coloca la imagen de fondo detrás de los otros elementos */
-    }
-    .my-Pet {
-      background-color: #1D5D9B;
-      border: 1px solid;
-      border-radius: 1em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 180%;
-    }
-    .buttonSubmit {
-      background-color: #75C2F6;
-      border: 1px solid;
-      border-radius: 3em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 180%;
-    }
-    .inputId {
-      background-color: #F4D160;
-      border: 1px solid;
-      border-radius: 3em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 100%;
-    }  
-    .inputAge {
-      background-color: #F4D160;
-      border: 1px solid;
-      border-radius: 3em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 100%;
-    }
-    .inputGender {
-      background-color: #F4D160;
-      border: 1px solid;
-      border-radius: 3em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 100%;
-    }
-    .inputDogBreed {
-      background-color: #F4D160;
-      border: 1px solid;
-      border-radius: 3em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 100%;
-    }
-    .inputWeight {
-      background-color: #F4D160;
-      border: 1px solid;
-      border-radius: 3em;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 100%;
-    }
-    .inputVaccinesY {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #75C2F6;
-    }
-    .inputVaccinesN {
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
-  
+
+  section {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 80%;
+    height: 80%;
+    margin-left: 15%;
+    margin-right: 15%;
+    position: relative;
+    /* Añade posición relativa */
+    z-index: 2;
+    /* Coloca la imagen del logo y los botones por encima de la imagen de fondo */
+    margin-top: 1em;
+  }
+
+  .btns-div {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 27em;
+    position: relative;
+    /* Añade posición relativa */
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    /* Coloca la imagen del logo y los botones por encima de la imagen de fondo */
+  }
+
+  .btn-register {
+    background-color: #F4D160;
+    border-radius: 3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 180%;
+    margin-right: 3em;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn-login {
+    background-color: #75C2F6;
+    border-radius: 3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 180%;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px
+  }
+
+  .img2 {
+    position: absolute;
+    /* Añade posición absoluta para que la imagen de fondo cubra todo el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Coloca la imagen de fondo detrás de los otros elementos */
+  }
+
+  .dogForm {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .my-pet {
+    background-color: #1D5D9B;
+    color: white;
+    border: 1px solid;
+    border-radius: 1em;
+    font-size: 180%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .imgDogForm {
+    border-radius: 1em;
+
+  }
+
+  .buttonSubmit,
+  .buttonReturn {
+    background-color: #75C2F6;
+    border-radius: 1em;
+    font-size: 100%;
+    width: 48%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+    margin-bottom: 0px;
+  }
+
+  .inputId,
+  .inputAge,
+  .inputGender,
+  .inputDogBreed,
+  .inputWeight {
+    background-color: #F4D160;
+    border-radius: 3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 1px;
+    padding: 1em;
+    flex: 1;
+  }
+
+  /*.labelVaccines,
+  .labelSterilized
+   {
+    flex: 1;
+    background-color: #F4D160;
+    border: 1px solid;
+    border-radius: 3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 1px;
+    padding: 1em;
+  }*/
+  .divVaccines {
+    background-color: #F4D160;
+    border-radius: 1em;
+    width: 80%;
+    height: 1px;
+    padding: 1em;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .divSterilized {
+    background-color: #F4D160;
+    border-radius: 1em;
+    width: 80%;
+    height: 1px;
+    padding: 1em;
+    flex: 1;
+  }
+
+}
