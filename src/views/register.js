@@ -16,10 +16,12 @@ function register(navigateTo) {
   inputPass.placeholder = 'Password';
   inputPass.type = 'password';
 
-  title.textContent = 'Register';
+  title.textContent = 'User Register';
   buttonRegister.textContent = 'Register';
   buttonRegister.classList.add('button-register');
-
+  /*buttonRegister.addEventListener('click', () => {
+    navigateTo('/dogform');
+  });*/
   buttonReturn.classList.add('button-return');
   buttonReturn.textContent = 'Return to home';
   buttonReturn.addEventListener('click', () => {
@@ -31,7 +33,7 @@ function register(navigateTo) {
     registrarConEmail(inputEmail.value, inputPass.value)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigateTo('/form');
+        navigateTo('/dogform');
         return user;
       })
       .catch((error) => {
@@ -40,8 +42,8 @@ function register(navigateTo) {
         return errorMessage;
       });
   });
-  form.append(inputEmail, inputPass, divButtonsRegister, buttonRegister);
-  section.append(title, form, buttonReturn);
+  form.append(inputEmail, inputPass, divButtonsRegister, buttonRegister, buttonReturn);
+  section.append(title, form);
   return section;
 }
 export default register;

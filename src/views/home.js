@@ -8,6 +8,8 @@ function home(navigateTo) {
   div.classList.add('btns-div');
   const buttonRegister = document.createElement('button');
   const buttonLogin = document.createElement('button');
+  const divImage = document.createElement("div");
+  divImage.classList.add("divImage");
   const fondo = document.createElement('img');
   fondo.classList.add('img2');
   fondo.src = back;
@@ -29,10 +31,13 @@ function home(navigateTo) {
   buttonLogin.addEventListener('click', () => {
     navigateTo('/login');
   });
-  div.append(buttonRegister, buttonLogin);
-  section.appendChild(fondo);
   section.appendChild(img1);
+  section.append(divImage);
+  divImage.appendChild(fondo);
   section.appendChild(div);
+  div.append(buttonRegister, buttonLogin);
+  
+  
   return section;
 }
 
