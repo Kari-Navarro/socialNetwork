@@ -1,4 +1,4 @@
-import imgDogForm from './img3.jpg'
+import imgDogForm from './img3.jpg';
 
 function dogRegister(navigateTo) {
   // if (user.pet) {
@@ -15,36 +15,36 @@ function dogRegister(navigateTo) {
   img3.classList.add('imgDogForm');
 
   const buttonReturn = document.createElement('button');
-  buttonReturn.classList.add("buttonReturn");
+  buttonReturn.classList.add('buttonReturn');
 
   const buttonSubmit = document.createElement('button');
-  buttonSubmit.classList.add("buttonSubmit");
+  buttonSubmit.classList.add('buttonSubmit');
 
   const dogForm = document.createElement('form');
-  dogForm.classList.add("dogForm");
+  dogForm.classList.add('dogForm');
 
   const inputId = document.createElement('input');
-  inputId.classList.add("inputId");
+  inputId.classList.add('inputId');
   inputId.placeholder = 'Dog ID';
   inputId.type = 'text';
 
   const inputAge = document.createElement('input');
-  inputAge.classList.add("inputAge");
+  inputAge.classList.add('inputAge');
   inputAge.placeholder = 'Age';
   inputAge.type = 'number';
 
   const inputGender = document.createElement('input');
-  inputGender.classList.add("inputGender");
+  inputGender.classList.add('inputGender');
   inputGender.placeholder = 'Gender: Male or Female';
   inputGender.type = 'text';
 
   const inputDogBreed = document.createElement('input');
-  inputDogBreed.classList.add("inputDogBreed");
+  inputDogBreed.classList.add('inputDogBreed');
   inputDogBreed.placeholder = 'Dog Breed';
   inputDogBreed.type = 'text';
 
   const inputWeight = document.createElement('input');
-  inputWeight.classList.add("inputWeight");
+  inputWeight.classList.add('inputWeight');
   inputWeight.placeholder = 'Weight';
   inputWeight.type = 'number';
 
@@ -52,55 +52,55 @@ function dogRegister(navigateTo) {
 
   const labelVaccinesY = document.createElement('label');
   const inputVaccinesY = document.createElement('input');
-  inputVaccinesY.classList.add("inputVaccinesY");
+  inputVaccinesY.classList.add('inputVaccinesY');
 
   const labelVaccinesN = document.createElement('label');
   const inputVaccinesN = document.createElement('input');
-  inputVaccinesN.classList.add("inputVaccinesN");
+  inputVaccinesN.classList.add('inputVaccinesN');
 
   const labelSterilized = document.createElement('label');
 
   const labelSterilizedY = document.createElement('label');
   const inputSterilizedY = document.createElement('input');
-  inputSterilizedY.classList.add("inputSterilizedY");
+  inputSterilizedY.classList.add('inputSterilizedY');
 
   const labelSterilizedN = document.createElement('label');
   const inputSterilizedN = document.createElement('input');
-  inputSterilizedN.classList.add("inputSterilizedN");
+  inputSterilizedN.classList.add('inputSterilizedN');
 
-  const divVaccines = document.createElement("div");
-  divVaccines.classList.add("divVaccines");
+  const divVaccines = document.createElement('div');
+  divVaccines.classList.add('divVaccines');
   labelVaccines.textContent = 'Vaccines: ';
-  labelVaccines.classList.add("labelVaccines");
+  labelVaccines.classList.add('labelVaccines');
   labelVaccinesY.textContent = 'Yes';
-  labelVaccinesY.classList.add("radio");
+  labelVaccinesY.classList.add('radio');
   inputVaccinesY.type = 'radio';
   inputVaccinesY.name = 'vaccineStatus';
   labelVaccinesN.textContent = 'No';
   inputVaccinesN.name = 'vaccineStatus';
-  labelVaccinesN.classList.add("radio");
+  labelVaccinesN.classList.add('radio');
   inputVaccinesN.type = 'radio';
 
-  const divSterilized = document.createElement("div");
-  divSterilized.classList.add("divSterilized");
+  const divSterilized = document.createElement('div');
+  divSterilized.classList.add('divSterilized');
   labelSterilized.textContent = 'Sterilized: ';
-  labelSterilized.classList.add("labelSterilized");
+  labelSterilized.classList.add('labelSterilized');
   labelSterilizedY.textContent = 'Yes';
-  labelSterilizedY.classList.add("radio");
+  labelSterilizedY.classList.add('radio');
   inputSterilizedY.type = 'radio';
   inputSterilizedY.name = 'sterilizedStatus';
   labelSterilizedN.textContent = 'No';
-  labelSterilizedN.classList.add("radio");
+  labelSterilizedN.classList.add('radio');
   inputSterilizedN.type = 'radio';
   inputSterilizedN.name = 'sterilizedStatus';
 
   title.textContent = 'my pet';
-  title.classList.add("my-pet");
+  title.classList.add('my-pet');
 
   buttonSubmit.textContent = 'Submit';
-  buttonSubmit.classList.add("buttonSubmit");
+  buttonSubmit.classList.add('buttonSubmit');
 
-  buttonReturn.classList.add("buttonReturn");
+  buttonReturn.classList.add('buttonReturn');
 
   buttonReturn.textContent = 'Return';
   buttonReturn.addEventListener('click', () => {
@@ -122,7 +122,7 @@ function dogRegister(navigateTo) {
     return myPet;
   });
 
-  //.then((userCredential) => {
+  // .then((userCredential) => {
   // const user = userCredential.user;
   //   navigateTo('/feed');// CREAR CARPETA DEL FEED
   //   return user;
@@ -137,14 +137,15 @@ function dogRegister(navigateTo) {
     labelVaccinesY,
     inputVaccinesY,
     labelVaccinesN,
-    inputVaccinesN)
+    inputVaccinesN,
+  );
   divSterilized.append(
     labelSterilized,
     labelSterilizedY,
     inputSterilizedY,
     labelSterilizedN,
     inputSterilizedN,
-  )
+  );
   dogForm.append(
     img3,
     inputId,

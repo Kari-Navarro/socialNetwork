@@ -33,6 +33,7 @@ section {
     height: 80%;
     margin-left: 15%;
     margin-right: 15%;
+    margin-top: 20%;
     position: relative;
     /* Añade posición relativa */
     z-index: 2;
@@ -44,7 +45,7 @@ section {
     display: flex;
     justify-content: center;
     align-content: flex-start;
-    margin-top: 27em;
+    margin-top: 25em;
     position: relative;
     /* Añade posición relativa */
     z-index: 2;
@@ -57,29 +58,49 @@ section {
 
   .btn-register {
     background-color: #F4D160;
+    border: none;
+    outline: none;
+    cursor: pointer;
     border-radius: 3em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 180%;
-    margin-right: 3em;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
+    margin-left: 9em;
+    transition: .7s;
+    box-shadow: 0 6px 0 #efc129;
+    width: 140%;
+    height: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+  }
+  .btn-register:active{
+    box-shadow: none;
+    transform: translateY(6px);
   }
 
   .btn-login {
     background-color: #75C2F6;
+    border: none;
+    outline: none;
+    cursor: pointer;
     border-radius: 3em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 180%;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px
+    margin-left: 2em;
+    transition: .7s;
+    box-shadow: 0 6px 0 #2aa0ee;
+    height: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 180%;
+    display: inline-block;
+    margin-bottom: 0px;
+  }
+  .btn-login:active{
+    box-shadow: none;
+    transform: translateY(6px);
   }
 
   .img2 {
-    position: absolute;
+    position:fixed;
     /* Añade posición absoluta para que la imagen de fondo cubra todo el contenedor */
     top: 0;
     left: 0;
@@ -87,6 +108,52 @@ section {
     height: 100%;
     z-index: 1;
     /* Coloca la imagen de fondo detrás de los otros elementos */
+  }
+
+  .div-buttons{
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 25em;
+    position: relative;
+    /* Añade posición relativa */
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+  }
+
+  .button-register{
+    background-color: #F4D160;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3em;
+    font-size: 180%;
+    margin-left: 2em;
+    align-items: center;
+    justify-content: center;
+    transition: .7s;
+    box-shadow: 0 6px 0 #efc129;
+    width: 110%;
+    height: auto;
+  }
+
+  .button-return{
+    background-color: #F4D160;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3em;
+    font-size: 180%;
+    margin-left: 2em;
+    align-items: center;
+    justify-content: center;
+    transition: .7s;
+    box-shadow: 0 6px 0 #efc129;
+    width: 110%;
+    height: auto;
   }
 
   .dogForm {
@@ -103,7 +170,6 @@ section {
     border-radius: 1em;
     font-size: 180%;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     align-items: center;
     justify-content: center;
     width: fit-content;
@@ -121,7 +187,6 @@ section {
     font-size: 100%;
     width: 48%;
     height: auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: inline-block;
     margin-bottom: 0px;
   }
@@ -133,7 +198,6 @@ section {
   .inputWeight {
     background-color: #F4D160;
     border-radius: 3em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 100%;
     align-items: center;
     justify-content: center;
@@ -143,21 +207,6 @@ section {
     flex: 1;
   }
 
-  /*.labelVaccines,
-  .labelSterilized
-   {
-    flex: 1;
-    background-color: #F4D160;
-    border: 1px solid;
-    border-radius: 3em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 100%;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    height: 1px;
-    padding: 1em;
-  }*/
   .divVaccines {
     background-color: #F4D160;
     border-radius: 1em;
