@@ -14,6 +14,8 @@ function home(navigateTo) {
   fondo.classList.add('img2');
   fondo.src = back;
   fondo.alt = 'img fondo';
+  const divLogo = document.createElement("div");
+  divLogo.classList.add("divLogo");
   const img1 = document.createElement('img');
   img1.classList.add('img1');
   img1.src = logo;
@@ -31,11 +33,14 @@ function home(navigateTo) {
   buttonLogin.addEventListener('click', () => {
     navigateTo('/login');
   });
-  section.appendChild(img1);
-  section.append(divImage);
+
+  section.appendChild(divLogo);
+  divLogo.appendChild(img1);
+  section.appendChild(divImage);
   divImage.appendChild(fondo);
   section.appendChild(div);
-  div.append(buttonRegister, buttonLogin);
+  div.appendChild(buttonRegister);
+  div.appendChild(buttonLogin);
   
   
   return section;

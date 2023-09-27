@@ -1,13 +1,12 @@
-section {
+/*section {
   /*background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;*/
+    background-size: cover;
   display: flex;
   flex-direction: column;
   max-width: 100%;
   padding: 10px;
-  /*justify-content: space-between;*/
 }
 
 .dogForm {
@@ -15,7 +14,7 @@ section {
   flex-direction: column;
   gap: 10px;
 }
-
+@media (min-width: 768px){}
 @media (min-width: 390px) {
   body {
     margin: 0;
@@ -35,9 +34,7 @@ section {
     margin-right: 15%;
     margin-top: 20%;
     position: relative;
-    /* Añade posición relativa */
     z-index: 3;
-    /* Coloca la imagen del logo y los botones por encima de la imagen de fondo */
     margin-top: 1em;
   }
 
@@ -45,13 +42,10 @@ section {
     display: flex;
     margin-top: 25em;
     position: relative;
-    /* Añade posición relativa */
     align-items: center;
     justify-content: center;
     width: 100px;
     height: 100px;
-
-    /* Coloca la imagen del logo y los botones por encima de la imagen de fondo */
   }
 
   .btn-register {
@@ -108,7 +102,6 @@ section {
     height: 100%;
     object-fit: cover;
     max-width: 100%;
-    /* Coloca la imagen de fondo detrás de los otros elementos */
   }
 
   .div-buttons {
@@ -117,14 +110,12 @@ section {
     align-content: flex-start;
     margin-top: 25em;
     position: relative;
-    /* Añade posición relativa */
     z-index: 2;
     align-items: center;
     justify-content: center;
     width: 100px;
     height: 100px;
   }
-  /*Botones de registro de usuario y retorno al home*/
   .button-return,
   .button-register {
     background-color: #F4D160;
@@ -212,4 +203,107 @@ section {
     flex: 1;
   }
 
+}*/
+
+body {
+  background-color: #FBEEAC;
+  display: grid;
+  /*background-image: url ();*/
+  
+}
+
+section {
+  display: grid;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e5e8e8;
+  background: #f8f9f9;
+  border-radius: 8px;
+  position: relative;
+  gap: 16px; /* Espacio entre elementos si es necesario */
+  padding: 16px;
+  /*align-items: center;*/
+}
+
+.divLogo {
+  z-index: 2;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 90%;
+  height: 90%;
+  margin-left: 9%;
+  margin-right: 15%;
+
+}
+
+.divImage {
+  z-index: 1;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.img2 {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+}
+
+.btns-div {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5em;
+  justify-content: center;
+  min-height: 60px;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.btn-login {
+  z-index: 3;
+  background-color: #75C2F6;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -10px;
+}
+
+.btn-register {
+  color: rgb(0, 0, 0);
+  z-index: 3;
+  background-color: #F4D160;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -10px;
 }
