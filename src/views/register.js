@@ -19,9 +19,9 @@ function register(navigateTo) {
   title.textContent = 'User Register';
   buttonRegister.textContent = 'Register';
   buttonRegister.classList.add('button-register');
-  /*buttonRegister.addEventListener('click', () => {
+  /* buttonRegister.addEventListener('click', () => {
     navigateTo('/dogform');
-  });*/
+  }); */
   buttonReturn.classList.add('button-return');
   buttonReturn.textContent = 'Return to home';
   buttonReturn.addEventListener('click', () => {
