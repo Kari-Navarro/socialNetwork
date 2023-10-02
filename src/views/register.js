@@ -1,4 +1,4 @@
-import { registrarConEmail } from '../firebase/auth.js';
+import { signUpUser, updateCurrentUser } from '../firebase/auth.js';
 
 function register(navigateTo) {
   const section = document.createElement('section');
@@ -29,15 +29,14 @@ function register(navigateTo) {
   });
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    // console.log(controlador.registrar(inputEmail.value, inputPass.value));
-    registrarConEmail(inputEmail.value, inputPass.value)
+    signUpUser(inputEmail.value, inputPass.value)
+
       .then((userCredential) => {
         const user = userCredential.user;
         navigateTo('/dogform');
         return user;
       })
       .catch((error) => {
-      // const errorCode = error.code;
         const errorMessage = error.message;
         return errorMessage;
       });
