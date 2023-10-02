@@ -3,6 +3,7 @@ import logo from './logo.png';
 
 function home(navigateTo) {
   const section = document.createElement('section');
+  section.classList.add('sectionHome');
   const div = document.createElement('div');
   div.classList.add('btns-div');
   const buttonRegister = document.createElement('button');

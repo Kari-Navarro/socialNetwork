@@ -2,18 +2,158 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
-  background-color: #cf804b;
+  background-color:  #fbf4ad;
   display: grid;
   place-items: center;
+}
+/*Aqui empiezan los estilos para el register*/
 
+ h2 {
+  position: absolute; /* Establece la posición absoluta para el h2 */
+  top: 30px; /* Ajusta la distancia desde la parte superior */
+  right: 30px; /* Ajusta la distancia desde la derecha */
+  font-size: 1.5em; /* Establece el tamaño de fuente según tus preferencias */
+  font-weight: bold; /* Establece el grosor de la fuente como negrita */
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: 10px;
+  transition: .7s;
+  padding-left: 20px;
+  padding-right: 20px
 }
-h2{
-  color: aliceblue;
-  font-size: 180%;
+
+/*header{
+  background-image: url(./views/logo.png);
+}*/
+
+.section-register{
+  background-image: url(./views/registerimg.jpg);
+  background-position: center center;
+  /*display: grid;*/
+  background-size: cover;
+  display: grid;
+  /*width: 100%;*/
+  max-width: 600px;
+  place-items: center;
+  position: relative;
+  border-radius: 20px;
+  height: 100vh;
+  text-align: right;
 }
+
+.form-register{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  /*margin: auto;*/
+  align-items: center;
+}
+
+.input-email::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:aliceblue;
+  opacity: 1; /* Firefox */
+}
+.input-pass::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:aliceblue;
+  opacity: 1; /* Firefox */
+}
+
+
+.input-email{
+  z-index: 5;
+  background-color: #1D5D9B;
+  color:aliceblue;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -300px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #1D5D9B;
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.input-pass{
+  /*z-index: 5;*/
+  background-color: #1D5D9B;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -300px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #1D5D9B;
+  padding-left: 30px;
+  padding-right: 30px
+}
+.button-register{
+  /*z-index: 4;*/
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  position:relative;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -200px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #f7c82e;
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.button-register:active {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+.button-return{
+  z-index: 5;
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -200px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #f7c82e;
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.button-return:active {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+/*Aqui terminan los estilos para el register*/
+
+/*Aqui empiezan los estilos para el home*/
 section {
   background-image: url(./views/back.jpg);
   background-position: center center;
@@ -22,10 +162,8 @@ section {
   width: 100%;
   max-width: 600px;
   place-items: center;
-  border-radius: 8px;
   position: relative;
-  border-radius: 20px;
-  height: 80vh;
+  height: 100vh;
   justify-items: center;
 }
 
@@ -113,8 +251,8 @@ section {
   height: 70%;
   margin-left: 15%;
   margin-right: 15%;
-
 }
+
 
 .btns-div {
   display: grid;
@@ -169,6 +307,273 @@ section {
   box-shadow: none;
   transform: translateY(6px);
 }
+/*Aqui terminan los estilos para el home*/
+
+/*Aqui empiezan las medias de los dispositivos donde no se adapta correctamente*/
+/*De 0 a 768px dispositivos moviles*/
+@media (max-width: 768px) { 
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .section-register{
+    height: 100vh;
+    width: 72vh;
+  }
+  .form-register{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    /*position: absolute;*/
+    bottom: 0;
+    margin: auto;
+  }
+
+  .input-email{
+   width: 140px;
+  }
+
+  .input-pass{
+    width: 140px;
+
+  }
+
+  .button-register{
+    width: 140px;
+
+  }
+
+  .button-return{
+    width: 140px;
+    
+  }
+
+}
+/*De 769px (tabletas) hasta 1024px (computadoras medianas*/
+@media (min-width: 769px) and (max-width: 1024px){
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 40%;
+    height: 40%;
+    margin-left: 25%;
+    margin-right: 15%;
+    margin-top: -5%;
+  
+}
+}
+/*De 1025px (computadora mediana hasta de escritorio)*/
+@media (min-width: 1025px){
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 35%;
+    margin-right: 15%;
+    margin-top: -5%;
+}
+}
+
+
+/*Dog Form*/
+.section-dogform{
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10% 30% 50% 10%;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  height: 80vh;
+}
+
+.section-dogform .img3{
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 2;
+  object-fit: cover;
+}
+
+.my-pet{
+  grid-column: 1/2;
+  text-align: center;
+  align-self: center;
+  background-color:#1D5D9B;
+ }
+
+.dogForm{
+  grid-row:3;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  gap: .5em;
+  margin-top: 2%;
+ }
+
+.inputId{
+ grid-column: 1/3;
+ border-radius: 20px;
+ background-color: #F4D160;
+ margin-left: 5%;
+ margin-right: 5%;
+ border: none;
+ font-weight: bold;
+ text-indent: 5%;
+}
+
+.inputId::placeholder{
+  font-weight: bold;
+  text-indent: 5%;
+  color: black;
+}
+
+.inputAge{
+  grid-column: 1;
+  border-radius: 20px;
+  background-color: #F4D160;
+  margin-left: 10%;
+  border: none;
+  font-weight: bold;
+  text-indent: 10%;
+} 
+
+.inputAge::placeholder{
+  color:black;
+  font-weight: bold;
+  text-indent: 10%;
+}
+
+.inputGender{
+  grid-column: 2;
+  border-radius: 20px;
+  background-color: #F4D160;
+  margin-right: 10%;
+  border: none;
+  font-weight: bold;
+  text-indent: 10%;
+}
+
+.inputGender::placeholder{
+  color:black;
+  font-weight: bold;
+  text-indent: 10%;
+}
+
+.inputDogBreed{
+  grid-column: 1;
+  border-radius: 20px;
+  background-color: #F4D160;
+  margin-left: 10%;
+  border: none;
+  font-weight: bold;
+  text-indent: 10%;
+}
+
+.inputDogBreed::placeholder{
+  color:black;
+  font-weight: bold;
+  text-indent: 10%;
+}
+
+.inputWeight{
+  grid-column: 2;
+  border-radius: 20px;
+  background-color: #F4D160;
+  margin-right: 10%;
+  border: none;
+  font-weight: bold;
+  text-indent: 10%;
+}
+
+.inputWeight::placeholder{
+  color:black;
+  font-weight: bold;
+  text-indent: 10%;
+}
+
+.divVaccines{
+  grid-column: 1/3;
+  border-radius: 20px;
+  background-color: #F4D160;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-indent: 5%;
+  font-weight: 600;
+  font-size: small ;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.divSterilized{
+  grid-column: 1/3;
+  border-radius: 20px;
+  background-color: #F4D160;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-indent: 5%;
+  font-weight: 600;
+  font-size: small ;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.buttonSubmit{
+  grid-column: 1/3;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  width: 104px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin-left: 5%;
+  margin-right: 5%;
+  transition: .7s;
+  box-shadow: 0 6px 0 #f7c82e;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-self: center;
+}
+
+.buttonReturn{
+  grid-column: 1/3;
+  grid-row: 4;
+  background-color: #75C2F6;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  width: 104px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin-left: 5%;
+  margin-right: 5%;
+  transition: .7s;
+  box-shadow: 0 6px 0 #2aa0ee;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-self: center;
+}
+
+/*aqui terminamos el Dogform*/
 
 /*Logo Login*/
 .divLogoLogin {
