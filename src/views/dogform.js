@@ -7,7 +7,12 @@ function dogRegister(navigateTo) {
 
   // }
   const section = document.createElement('section');
+  section.classList.add('section-dogform');
+
   const title = document.createElement('h2');
+  title.textContent = 'My Pet';
+  title.classList.add('my-pet');
+
   const img3 = document.createElement('img');
   img3.classList.add('img3');
   img3.src = imgDogForm;
@@ -27,32 +32,41 @@ function dogRegister(navigateTo) {
   inputId.classList.add('inputId');
   inputId.placeholder = 'Dog ID';
   inputId.type = 'text';
+  inputId.required = true;
 
   const inputAge = document.createElement('input');
   inputAge.classList.add('inputAge');
   inputAge.placeholder = 'Age';
   inputAge.type = 'number';
+  inputAge.required = true;
 
   const inputGender = document.createElement('input');
   inputGender.classList.add('inputGender');
   inputGender.placeholder = 'Gender: Male or Female';
   inputGender.type = 'text';
+  inputGender.required = true;
+
 
   const inputDogBreed = document.createElement('input');
   inputDogBreed.classList.add('inputDogBreed');
   inputDogBreed.placeholder = 'Dog Breed';
   inputDogBreed.type = 'text';
+  inputDogBreed.required = true;
+
 
   const inputWeight = document.createElement('input');
   inputWeight.classList.add('inputWeight');
-  inputWeight.placeholder = 'Weight';
+  inputWeight.placeholder = 'Weight (kg)';
   inputWeight.type = 'number';
+  inputWeight.required = true;
+
 
   const labelVaccines = document.createElement('label');
 
   const labelVaccinesY = document.createElement('label');
   const inputVaccinesY = document.createElement('input');
   inputVaccinesY.classList.add('inputVaccinesY');
+
 
   const labelVaccinesN = document.createElement('label');
   const inputVaccinesN = document.createElement('input');
@@ -94,14 +108,10 @@ function dogRegister(navigateTo) {
   inputSterilizedN.type = 'radio';
   inputSterilizedN.name = 'sterilizedStatus';
 
-  title.textContent = 'my pet';
-  title.classList.add('my-pet');
-
   buttonSubmit.textContent = 'Submit';
   buttonSubmit.classList.add('buttonSubmit');
 
   buttonReturn.classList.add('buttonReturn');
-
   buttonReturn.textContent = 'Return';
   buttonReturn.addEventListener('click', () => {
     navigateTo('/');
@@ -147,7 +157,6 @@ function dogRegister(navigateTo) {
     inputSterilizedN,
   );
   dogForm.append(
-    img3,
     inputId,
     inputAge,
     inputGender,
