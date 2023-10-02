@@ -1,6 +1,5 @@
 // file home.js
 import logo from './logo.png';
-import back from './back.jpg';
 
 function home(navigateTo) {
   const section = document.createElement('section');

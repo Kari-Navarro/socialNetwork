@@ -128,7 +128,6 @@ function dogRegister(navigateTo) {
       vaccines: inputVaccinesY.value,
       sterilized: inputSterilizedY.value,
     };
-    console.log(myPet);
     return myPet;
   });
 

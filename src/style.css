@@ -6,14 +6,155 @@
 }
 
 body {
-  background-color:  #cf804b ;
+  background-color:  #fbf4ad;
   display: grid;
   place-items: center;
 }
+/*Aqui empiezan los estilos para el register*/
+
+ h2 {
+  position: absolute; /* Establece la posición absoluta para el h2 */
+  top: 30px; /* Ajusta la distancia desde la parte superior */
+  right: 30px; /* Ajusta la distancia desde la derecha */
+  font-size: 1.5em; /* Establece el tamaño de fuente según tus preferencias */
+  font-weight: bold; /* Establece el grosor de la fuente como negrita */
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: 10px;
+  transition: .7s;
+  padding-left: 20px;
+  padding-right: 20px
+}
+
+/*header{
+  background-image: url(./views/logo.png);
+}*/
+
+.section-register{
+  background-image: url(./views/registerimg.jpg);
+  background-position: center center;
+  /*display: grid;*/
+  background-size: cover;
+  display: grid;
+  /*width: 100%;*/
+  max-width: 600px;
+  place-items: center;
+  position: relative;
+  border-radius: 20px;
+  height: 100vh;
+  text-align: right;
+}
+
+.form-register{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  /*margin: auto;*/
+  align-items: center;
+}
+
+.input-email::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:aliceblue;
+  opacity: 1; /* Firefox */
+}
+.input-pass::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:aliceblue;
+  opacity: 1; /* Firefox */
+}
 
 
+.input-email{
+  z-index: 5;
+  background-color: #1D5D9B;
+  color:aliceblue;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -300px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #1D5D9B;
+  padding-left: 30px;
+  padding-right: 30px
+}
 
-.sectionHome {
+.input-pass{
+  /*z-index: 5;*/
+  background-color: #1D5D9B;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -300px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #1D5D9B;
+  padding-left: 30px;
+  padding-right: 30px
+}
+.button-register{
+  /*z-index: 4;*/
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  position:relative;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -200px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #f7c82e;
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.button-register:active {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+.button-return{
+  z-index: 5;
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px;
+  margin-top: -200px;
+  transition: .7s;
+  box-shadow: 0 6px 0 #f7c82e;
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.button-return:active {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+/*Aqui terminan los estilos para el register*/
+
+/*Aqui empiezan los estilos para el home*/
+section {
   background-image: url(./views/back.jpg);
   background-position: center center;
   background-size: cover;
@@ -23,8 +164,7 @@ body {
   place-items: center;
   border-radius: 8px;
   position: relative;
-  border-radius: 20px;
-  height: 80vh;
+  height: 100vh;
   justify-items: center;
 }
 
@@ -102,7 +242,6 @@ body {
   height: 70%;
   margin-left: 15%;
   margin-right: 15%;
-
 }
 
 
@@ -159,6 +298,88 @@ body {
   box-shadow: none;
   transform: translateY(6px);
 }
+/*Aqui terminan los estilos para el home*/
+
+/*Aqui empiezan las medias de los dispositivos donde no se adapta correctamente*/
+/*De 0 a 768px dispositivos moviles*/
+@media (max-width: 768px) { 
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .section-register{
+    height: 100vh;
+    width: 72vh;
+  }
+  .form-register{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    /*position: absolute;*/
+    bottom: 0;
+    margin: auto;
+  }
+
+  .input-email{
+   width: 140px;
+  }
+
+  .input-pass{
+    width: 140px;
+
+  }
+
+  .button-register{
+    width: 140px;
+
+  }
+
+  .button-return{
+    width: 140px;
+    
+  }
+
+}
+/*De 769px (tabletas) hasta 1024px (computadoras medianas*/
+@media (min-width: 769px) and (max-width: 1024px){
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 40%;
+    height: 40%;
+    margin-left: 25%;
+    margin-right: 15%;
+    margin-top: -5%;
+  
+}
+}
+/*De 1025px (computadora mediana hasta de escritorio)*/
+@media (min-width: 1025px){
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 35%;
+    margin-right: 15%;
+    margin-top: -5%;
+}
+}
+
 
 /*Dog Form*/
 .section-dogform{
