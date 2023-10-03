@@ -1,4 +1,4 @@
-import { signUpUser, updateCurrentUser } from '../firebase/auth.js';
+import { signUpUser } from '../firebase/auth.js';
 
 function register(navigateTo) {
   const section = document.createElement('section');
