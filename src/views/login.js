@@ -7,8 +7,9 @@ function login(navigateTo) {
   const section = document.createElement('section');
   section.classList.add('sectionLogin');
   const title = document.createElement('h2');
+  title.id = 'titleLogin';
   const buttonReturn = document.createElement('button');
-  buttonReturn.classList.add('buttonReturn');
+  buttonReturn.classList.add('buttonReturnLogin');
   const form = document.createElement('form');
   form.classList.add('formLogin');
   const inputEmail = document.createElement('input');
@@ -27,11 +28,11 @@ function login(navigateTo) {
 
   const divLogoLogin = document.createElement('div');
   divLogoLogin.classList.add('divLogoLogin');
-  const img1 = document.createElement('img');
-  img1.classList.add('img1');
-  img1.src = logo;
-  img1.alt = 'logoLogin';
-  img1.classList.add('logoLogin');
+  const logoLogin = document.createElement('img');
+  logoLogin.classList.add('img1');
+  logoLogin.src = logo;
+  logoLogin.alt = 'logoLogin';
+  logoLogin.classList.add('logoLogin');
 
   title.textContent = 'Login';
   buttonLogin.textContent = 'Login';
@@ -50,15 +51,13 @@ function login(navigateTo) {
     // Invocamos a la función loginWithGoogle que abre el popup de Google
     const user = await loginWithGoogle();
     if (user !== undefined) {
-      navigateTo('/feed');
+      navigateTo('/dogform');
     }
   });
 
-  form.append(inputEmail, inputPass);
-  section.append(title, divLogoLogin, form, divButtonsLogin, buttonGoogle);
-  divButtonsLogin.appendChild(buttonLogin);
-  divButtonsLogin.appendChild(buttonReturn);
-  divLogoLogin.appendChild(img1);
+  form.append(inputEmail, inputPass, buttonLogin);
+  section.append(logoLogin, title, form, buttonReturn, buttonGoogle);
+
   return section;
 }
 

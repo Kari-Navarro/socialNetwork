@@ -1,27 +1,17 @@
-import { signUpUser } from '../firebase/auth.js';
+import { signUpUser, updateCurrentUser } from '../firebase/auth.js';
+import logo from './logo.png';
 
 function register(navigateTo) {
   const section = document.createElement('section');
   section.classList.add('section-register');
   const title = document.createElement('h2');
-  title.classList.add = ('title');
+  title.id = 'titleRegister';
   const buttonReturn = document.createElement('button');
   const form = document.createElement('form');
   form.classList.add('form-register');
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
   const buttonRegister = document.createElement('button');
-  const divButtonsRegister = document.createElement('div');
-  divButtonsRegister.classList.add('div-buttons');
-
-  /* // Crear un elemento de imagen para el logotipo
-  const logo = document.createElement('img');
-  logo.src = 'logo.png'; // Ruta de la imagen del logotipo
-  logo.alt = 'Logotipo de la empresa';
-
-  // Agregar el logotipo al encabezado (header)
-  const header = document.querySelector('header');
-  header.append(logo); */
 
   inputEmail.classList.add('input-email');
   inputEmail.placeholder = 'Write email';
@@ -30,13 +20,18 @@ function register(navigateTo) {
   inputPass.placeholder = 'Password';
   inputPass.type = 'password';
 
+  const logoRegister = document.createElement('img');
+  logoRegister.src = logo;
+  logoRegister.alt = 'logoRegister';
+  logoRegister.classList.add('logoRegister');
+
   title.textContent = 'User Register';
   buttonRegister.textContent = 'Register';
   buttonRegister.classList.add('button-register');
   /* buttonRegister.addEventListener('click', () => {
     navigateTo('/dogform');
   }); */
-  buttonReturn.classList.add('button-return');
+  buttonReturn.classList.add('buttonReturnRegister');
   buttonReturn.textContent = 'Return to home';
   buttonReturn.addEventListener('click', () => {
     navigateTo('/');
@@ -58,11 +53,10 @@ function register(navigateTo) {
   form.append(
     inputEmail,
     inputPass,
-    divButtonsRegister,
     buttonRegister,
     buttonReturn,
   );
-  section.append(title, form);
+  section.append(logoRegister, title, form);
   return section;
 }
 export default register;

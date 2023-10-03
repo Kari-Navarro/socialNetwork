@@ -10,7 +10,7 @@ function dogRegister(navigateTo) {
 
   const title = document.createElement('h2');
   title.textContent = 'My Pet';
-  title.classList.add('my-pet');
+  title.classList.add('titleDogForm');
 
   const img3 = document.createElement('img');
   img3.classList.add('img3');
@@ -19,7 +19,7 @@ function dogRegister(navigateTo) {
   img3.classList.add('imgDogForm');
 
   const buttonReturn = document.createElement('button');
-  buttonReturn.classList.add('buttonReturn');
+  buttonReturn.classList.add('buttonReturnDog');
 
   const buttonSubmit = document.createElement('button');
   buttonSubmit.classList.add('buttonSubmit');
@@ -44,20 +44,24 @@ function dogRegister(navigateTo) {
   inputGender.placeholder = 'Gender: Male or Female';
   inputGender.type = 'text';
   inputGender.required = true;
+
   const inputDogBreed = document.createElement('input');
   inputDogBreed.classList.add('inputDogBreed');
   inputDogBreed.placeholder = 'Dog Breed';
   inputDogBreed.type = 'text';
   inputDogBreed.required = true;
+
   const inputWeight = document.createElement('input');
   inputWeight.classList.add('inputWeight');
   inputWeight.placeholder = 'Weight (kg)';
   inputWeight.type = 'number';
   inputWeight.required = true;
+
   const labelVaccines = document.createElement('label');
   const labelVaccinesY = document.createElement('label');
   const inputVaccinesY = document.createElement('input');
   inputVaccinesY.classList.add('inputVaccinesY');
+
   const labelVaccinesN = document.createElement('label');
   const inputVaccinesN = document.createElement('input');
   inputVaccinesN.classList.add('inputVaccinesN');
