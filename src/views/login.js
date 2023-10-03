@@ -7,7 +7,7 @@ function login(navigateTo) {
   const section = document.createElement('section');
   section.classList.add('sectionLogin');
   const title = document.createElement('h2');
-  title.classList.add('titleLogin');
+  title.id = 'titleLogin';
   const buttonReturn = document.createElement('button');
   buttonReturn.classList.add('buttonReturnLogin');
   const form = document.createElement('form');
@@ -28,11 +28,11 @@ function login(navigateTo) {
 
   const divLogoLogin = document.createElement('div');
   divLogoLogin.classList.add('divLogoLogin');
-  const img1 = document.createElement('img');
-  img1.classList.add('img1');
-  img1.src = logo;
-  img1.alt = 'logoLogin';
-  img1.classList.add('logoLogin');
+  const logoLogin = document.createElement('img');
+  logoLogin.classList.add('img1');
+  logoLogin.src = logo;
+  logoLogin.alt = 'logoLogin';
+  logoLogin.classList.add('logoLogin');
 
   title.textContent = 'Login';
   buttonLogin.textContent = 'Login';
@@ -56,8 +56,8 @@ function login(navigateTo) {
   });
 
   form.append(inputEmail, inputPass, buttonLogin);
-  section.append(title, divLogoLogin, form, buttonReturn, buttonGoogle);
-  divLogoLogin.appendChild(img1);
+  section.append(logoLogin, title, form, buttonReturn, buttonGoogle);
+
   return section;
 }
 
