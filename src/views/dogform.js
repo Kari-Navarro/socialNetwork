@@ -4,7 +4,6 @@ function dogRegister(navigateTo) {
   // if (user.pet) {
   //   navigateTo('/feed');
   // } else {
-
   // }
   const section = document.createElement('section');
   section.classList.add('section-dogform');
@@ -59,7 +58,6 @@ function dogRegister(navigateTo) {
   inputWeight.required = true;
 
   const labelVaccines = document.createElement('label');
-
   const labelVaccinesY = document.createElement('label');
   const inputVaccinesY = document.createElement('input');
   inputVaccinesY.classList.add('inputVaccinesY');
@@ -67,13 +65,10 @@ function dogRegister(navigateTo) {
   const labelVaccinesN = document.createElement('label');
   const inputVaccinesN = document.createElement('input');
   inputVaccinesN.classList.add('inputVaccinesN');
-
   const labelSterilized = document.createElement('label');
-
   const labelSterilizedY = document.createElement('label');
   const inputSterilizedY = document.createElement('input');
   inputSterilizedY.classList.add('inputSterilizedY');
-
   const labelSterilizedN = document.createElement('label');
   const inputSterilizedN = document.createElement('input');
   inputSterilizedN.classList.add('inputSterilizedN');
@@ -127,16 +122,6 @@ function dogRegister(navigateTo) {
     return myPet;
   });
 
-  // .then((userCredential) => {
-  // const user = userCredential.user;
-  //   navigateTo('/feed');// CREAR CARPETA DEL FEED
-  //   return user;
-  // })
-  //   .catch((error) => {
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //     return errorMessage;
-  //   });
   divVaccines.append(
     labelVaccines,
     labelVaccinesY,

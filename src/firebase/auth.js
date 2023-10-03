@@ -14,7 +14,7 @@ import { auth } from './firebase.js';
 /* getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect,
 getRedirectResult,signInWithEmailAndPassword, */
 
-//Funcion para crear nuevos usurios, recibe email y contraseña
+// Funcion para crear nuevos usurios, recibe email y contraseña
 const signUpUser = async (email, password) => {
   try {
     // Invocamos al servicio de firebase
@@ -23,7 +23,7 @@ const signUpUser = async (email, password) => {
       email,
       password,
     );
-    localStorage.setItem('user', userCredential?.user);
+    localStorage.setItem('user', userCredential.user);
 
     return userCredential;
   } catch (error) {
@@ -48,7 +48,7 @@ const loginUser = async (email, password) => {
       email,
       password,
     );
-    localStorage.setItem('user', userCredential?.user);
+    localStorage.setItem('user', userCredential.user);
     return userCredential;
   } catch (error) {
     if (error.code === 'auth/wrong-password') {
@@ -62,62 +62,61 @@ const loginUser = async (email, password) => {
     }
     return undefined;
   }
-}
-  const loginWithGoogle = async () => {
-    try {
-      // Inicializamos googleAuth
-      const provider = new GoogleAuthProvider();
-      // Invocamos el modal de iniciar sesion con google
-      const userCredential = await signInWithPopup(auth, provider);
-      localStorage.setItem('user', userCredential);
-      return userCredential;
-    } catch (error) {
-      return undefined;
-    }
-  };
-  const validateUserSession = () => {
-    //   // Detecta el estado de autentificación
-    //   // Este observador de firebase nos sirve para validar si el usuario ya habia iniciado sesion
-    //   // o ya se habia registrado, en este caso navegamos a feed.
-    onAuthStateChanged(auth, (user) => {
-      return user;
-    });
-  };
+};
 
-  const resetPasswordUser = async (email) => {
-    try {
-      // Invocamos al metodo resetPasswordResetEmail, el cual envia un link
-      // al correo del usuario para resetear su contraseña
-      await sendPasswordResetEmail(auth, email);
-      return true;
-    } catch (error) {
-      return undefined;
-    }
-  };
-  const signOutUser = async () => {
+const loginWithGoogle = async () => {
+  try {
+    // Inicializamos googleAuth
+    const provider = new GoogleAuthProvider();
+    // Invocamos el modal de iniciar sesion con google
+    const userCredential = await signInWithPopup(auth, provider);
+    localStorage.setItem('user', userCredential);
+    return userCredential;
+  } catch (error) {
+    return undefined;
+  }
+};
+const validateUserSession = () => {
+  //   // Detecta el estado de autentificación
+  //   // Este observador de firebase nos sirve para validar si el usuario ya habia iniciado sesion
+  //   // o ya se habia registrado, en este caso navegamos a feed.
+  onAuthStateChanged(auth, (user) => user);
+};
+
+const resetPasswordUser = async (email) => {
+  try {
+    // Invocamos al metodo resetPasswordResetEmail, el cual envia un link
+    // al correo del usuario para resetear su contraseña
+    await sendPasswordResetEmail(auth, email);
+    return true;
+  } catch (error) {
+    return undefined;
+  }
+};
+const signOutUser = async () => {
+  // función para cierre de sesión, no testeada aún
+  try {
     // función para cierre de sesión, no testeada aún
-    try {
-      // función para cierre de sesión, no testeada aún
-      await signOut(auth);
-      return localStorage.removeItem('user');
-    } catch (error) {
-      return alert('Something wrong happened, please try again.');
-    }
-    // termina función de cierre de sesión
-  };
+    await signOut(auth);
+    return localStorage.removeItem('user');
+  } catch (error) {
+    return alert('Something wrong happened, please try again.');
+  }
+  // termina función de cierre de sesión
+};
 // Funcion para actualizar el usuario
 const updateCurrentUser = async (completeUserName) => {
   await updateProfile(auth.currentUser, { displayName: completeUserName });
 };
-  /*function registrarConEmail(email, password) {
-    return createUserWithEmailAndPassword(auth, email, password);
-  }*/
+/* function registrarConEmail(email, password) {
+  return createUserWithEmailAndPassword(auth, email, password);
+} */
 
-  /*const updateOutput = (outputElement, message) => {
-    if (outputElement) {
-      outputElement.textContent = message;
-    }
-  };*/
+/* const updateOutput = (outputElement, message) => {
+  if (outputElement) {
+    outputElement.textContent = message;
+  }
+}; */
 
 // funcion que comparito el coach
 // Importa Firebase y configura la inicialización
@@ -157,6 +156,5 @@ export {
   signOutUser,
   validateUserSession,
   resetPasswordUser,
-  updateCurrentUser
+  updateCurrentUser,
 };
-

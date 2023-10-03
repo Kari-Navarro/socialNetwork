@@ -1,6 +1,6 @@
 // boton de google
 
-import { loginUser, loginWithGoogle } from '../firebase/auth.js';
+import { loginWithGoogle } from '../firebase/auth.js';
 import logo from './logo.png';
 
 function login(navigateTo) {
