@@ -4,9 +4,7 @@ import register from './views/register.js';
 import error from './views/error.js';
 import login from './views/login.js';
 import dogRegister from './views/dogform.js';
-// import { getAuth, signInWithRedirect } from 'firebase/auth';
-
-// const auth
+import feed from './views/feed.js';
 
 const routes = [
   { path: '/', component: home },
@@ -14,6 +12,7 @@ const routes = [
   { path: '/error', component: error },
   { path: '/login', component: login },
   { path: '/dogform', component: dogRegister },
+  { path: '/feed', component: feed },
 ];
 const defaultRoute = '/';
 const root = document.getElementById('root');

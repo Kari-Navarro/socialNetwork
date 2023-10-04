@@ -22,6 +22,7 @@ function dogRegister(navigateTo) {
   buttonReturn.classList.add('buttonReturnDog');
 
   const buttonSubmit = document.createElement('button');
+  buttonSubmit.setAttribute('type', 'submit');
   buttonSubmit.classList.add('buttonSubmit');
 
   const dogForm = document.createElement('form');
@@ -110,6 +111,7 @@ function dogRegister(navigateTo) {
 
   dogForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    navigateTo('/feed');
     const myPet = {
       id: inputId.value,
       age: inputAge.value,

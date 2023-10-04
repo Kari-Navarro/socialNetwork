@@ -1,5 +1,7 @@
-import { signUpUser, updateCurrentUser } from '../firebase/auth.js';
+import { signUpUser } from '../firebase/auth.js';
 import logo from './logo.png';
+
+// revisar si necesitamos updateCurrentUser
 
 function register(navigateTo) {
   const section = document.createElement('section');
@@ -12,6 +14,7 @@ function register(navigateTo) {
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
   const buttonRegister = document.createElement('button');
+  buttonRegister.setAttribute('type', 'submit');
 
   inputEmail.classList.add('input-email');
   inputEmail.placeholder = 'Write email';
@@ -28,9 +31,6 @@ function register(navigateTo) {
   title.textContent = 'User Register';
   buttonRegister.textContent = 'Register';
   buttonRegister.classList.add('button-register');
-  /* buttonRegister.addEventListener('click', () => {
-    navigateTo('/dogform');
-  }); */
   buttonReturn.classList.add('buttonReturnRegister');
   buttonReturn.textContent = 'Return to home';
   buttonReturn.addEventListener('click', () => {
