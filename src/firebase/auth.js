@@ -11,9 +11,6 @@ import {
 } from 'firebase/auth';
 import { auth } from './firebase.js';
 
-/* getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect,
-getRedirectResult,signInWithEmailAndPassword, */
-
 // Funcion para crear nuevos usurios, recibe email y contraseña
 const signUpUser = async (email, password) => {
   try {
@@ -29,13 +26,13 @@ const signUpUser = async (email, password) => {
   } catch (error) {
     // Manejo de errores
     if (error.code === 'auth/email-already-in-use') {
-      alert('This email is already in use');
-    } else if (error.code === 'auth/invalid-email') {
-      alert('Invalid email, please  try again');
-    } else if (error.code === 'auth/weak-password') {
-      alert('Your password is too short, please try again');
-    } else if (error.code) {
-      alert('Something went wrong, please try again');
+      return ('This email is already in use');
+    } if (error.code === 'auth/invalid-email') {
+      return ('Invalid email, please  try again');
+    } if (error.code === 'auth/weak-password') {
+      return ('Your password is too short, please try again');
+    } if (error.code) {
+      return ('Something went wrong, please try again');
     }
     return undefined;
   }
@@ -52,13 +49,13 @@ const loginUser = async (email, password) => {
     return userCredential;
   } catch (error) {
     if (error.code === 'auth/wrong-password') {
-      alert('Your password is wrong, please try again');
+      alert('Your password is wrong, please try again');// eslint-disable-line no-alert
     } else if (error.code === 'auth/user-not-found') {
-      alert('You are not signed up yet'); // Añadir botón de registro como mejora
+      alert('You are not signed up yet');// eslint-disable-line no-alert
     } else if (error.code === 'auth/invalid-email') {
-      alert('Invalid email, please try again');
+      alert('Invalid email, please try again'); // eslint-disable-line no-alert
     } else if (error.code) {
-      alert('Something went wrong, please try again');
+      alert('Something went wrong, please try again'); // eslint-disable-line no-alert
     }
     return undefined;
   }
@@ -73,6 +70,15 @@ const loginWithGoogle = async () => {
     localStorage.setItem('user', userCredential);
     return userCredential;
   } catch (error) {
+    if (error.code === 'auth/wrong-password') {
+      alert('Your password is wrong, please try again');// eslint-disable-line no-alert
+    } else if (error.code === 'auth/user-not-found') {
+      alert('You are not signed up yet');// eslint-disable-line no-alert
+    } else if (error.code === 'auth/invalid-email') {
+      alert('Invalid email, please try again'); // eslint-disable-line no-alert
+    } else if (error.code) {
+      alert('Something went wrong, please try again'); // eslint-disable-line no-alert
+    }
     return undefined;
   }
 };
@@ -108,9 +114,6 @@ const signOutUser = async () => {
 const updateCurrentUser = async (completeUserName) => {
   await updateProfile(auth.currentUser, { displayName: completeUserName });
 };
-/* function registrarConEmail(email, password) {
-  return createUserWithEmailAndPassword(auth, email, password);
-} */
 
 /* const updateOutput = (outputElement, message) => {
   if (outputElement) {
