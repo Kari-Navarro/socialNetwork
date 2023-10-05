@@ -14,9 +14,9 @@ function login(navigateTo) {
   // form.setAttribute('method', 'POST');
   form.classList.add('formLogin');
   const inputEmail = document.createElement('input');
-  inputEmail.classList.add('inputEmail');
+  inputEmail.classList.add('inputEmailLogin');
   const inputPass = document.createElement('input');
-  inputPass.classList.add('inputPassword');
+  inputPass.classList.add('inputPasswordLogin');
   const buttonLogin = document.createElement('button');
   buttonLogin.setAttribute('type', 'submit');
   const buttonGoogle = document.createElement('button');

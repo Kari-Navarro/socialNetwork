@@ -1,4 +1,5 @@
 import imgDogForm from './img3.jpg';
+import logo from './logo.png';
 
 function dogRegister(navigateTo) {
   // if (user.pet) {
@@ -17,6 +18,12 @@ function dogRegister(navigateTo) {
   img3.src = imgDogForm;
   img3.alt = 'img Dog Form';
   img3.classList.add('imgDogForm');
+
+  const logoDogForm = document.createElement('img');
+  logoDogForm.classList.add('img1');
+  logoDogForm.src = logo;
+  logoDogForm.alt = 'logoDogForm';
+  logoDogForm.classList.add('logoDogForm');
 
   const buttonReturn = document.createElement('button');
   buttonReturn.classList.add('buttonReturnDog');
@@ -77,34 +84,39 @@ function dogRegister(navigateTo) {
   const divVaccines = document.createElement('div');
   divVaccines.classList.add('divVaccines');
   labelVaccines.textContent = 'Vaccines: ';
-  labelVaccines.classList.add('labelVaccines');
+  labelVaccines.classList.add('radio');
   labelVaccinesY.textContent = 'Yes';
   labelVaccinesY.classList.add('radio');
   inputVaccinesY.type = 'radio';
   inputVaccinesY.name = 'vaccineStatus';
+  inputVaccinesY.classList = 'inputRadio';
   labelVaccinesN.textContent = 'No';
   inputVaccinesN.name = 'vaccineStatus';
   labelVaccinesN.classList.add('radio');
   inputVaccinesN.type = 'radio';
+  inputVaccinesN.classList = 'inputRadio';
+
 
   const divSterilized = document.createElement('div');
   divSterilized.classList.add('divSterilized');
   labelSterilized.textContent = 'Sterilized: ';
-  labelSterilized.classList.add('labelSterilized');
+  labelSterilized.classList.add('radio');
   labelSterilizedY.textContent = 'Yes';
   labelSterilizedY.classList.add('radio');
   inputSterilizedY.type = 'radio';
+  inputSterilizedY.classList = 'inputRadio';
   inputSterilizedY.name = 'sterilizedStatus';
   labelSterilizedN.textContent = 'No';
   labelSterilizedN.classList.add('radio');
   inputSterilizedN.type = 'radio';
   inputSterilizedN.name = 'sterilizedStatus';
+  inputSterilizedN.classList = 'inputRadio';
 
   buttonSubmit.textContent = 'Submit';
   buttonSubmit.classList.add('buttonSubmit');
 
   buttonReturn.classList.add('buttonReturn');
-  buttonReturn.textContent = 'Return';
+  buttonReturn.textContent = 'Return to home';
   buttonReturn.addEventListener('click', () => {
     navigateTo('/');
   });
@@ -150,6 +162,7 @@ function dogRegister(navigateTo) {
   );
   section.append(
     title,
+    logoDogForm,
     img3,
     dogForm,
     buttonReturn,

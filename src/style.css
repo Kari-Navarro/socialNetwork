@@ -11,285 +11,10 @@ body {
   background-color: #f7ecba;
 }
 
-#root{
+#root {
   display: flex;
   justify-content: center;
 }
-/*Aqui empiezan los estilos para el register*/
-
-.logoRegister{
-  grid-row: 1;
-  grid-column: 1;
-  width: 50%;
-  height: 100%;
-  justify-self: center;
-  }
-
-#titleRegister{
-  grid-column:2;
-  grid-row: 1;
-  font-size: 1.5em;
-  background-color: #F4D160;
-  color: rgb(0, 0, 0);
-  height: 35px;
-  border-radius: .5em;
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-}
-
-.section-register{
-  background-image: url(./views/registerimg.jpg);
-  background-position: center center;
-  display: grid;
-  grid-template-rows: 20% 30% 50%;
-  grid-template-columns: 50% 50%;
-  background-size: cover;
-  max-width: 100%;
-  position: relative;
-  height: 100%;
-  text-align: right;
-}
-
-.form-register{
-  grid-column: 1/3;
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
-  justify-items: center;
-}
-
-
-.input-email{
-  background-color: #1D5D9B;
-  color:aliceblue;
-  height: 35px;
-  width: 90%;
-  border: none;
-  outline: none;
-  border-radius: .5em;
-  cursor: pointer;
-  transition: .7s;
-  box-shadow: 0 6px 0 #1D5D9B;
-  padding-left: 30px;
-}
-
-.input-email::placeholder { 
-  color:aliceblue;
-  font-weight: bold;}
-
-.input-pass{
-  background-color: #1D5D9B;
-  color: rgb(0, 0, 0);
-  height: 35px;
-  width: 10%;
-  border: none;
-  outline: none;
-  border-radius: .5em;
-  cursor: pointer;
-  transition: .7s;
-  box-shadow: 0 6px 0 #1D5D9B;
-  padding-left: 30px;
-}
-
-.input-pass::placeholder { 
-  color:aliceblue;
-  font-weight: bold;}
-
-.button-register{
-  grid-column: 1;
-  grid-row: 2;
-  background-color: #F4D160;
-  color: rgb(0, 0, 0);
-  height: 35px;
-  border: none;
-  outline: none;
-  border-radius: .5em;
-  cursor: pointer;
-  transition: .7s;
-  box-shadow: 0 6px 0 #f7c82e;
-  padding-left: 30px;
-  padding-right: 30px
-}
-
-.buttonReturnRegister{
-  grid-column: 2;
-  grid-row: 2;
-  background-color: #F4D160;
-  color: rgb(0, 0, 0);
-  height: 35px;
-  width: 60%;
-  border: none;
-  outline: none;
-  border-radius: .5em;
-  cursor: pointer;
-  transition: .7s;
-  box-shadow: 0 6px 0 #f7c82e;
-  padding-left: 30px;
-  padding-right: 30px
-}
-
-.buttonReturnRegister:active {
-  box-shadow: none;
-  transform: translateY(6px);
-}
-
-/*Aqui empiezan las medias de los dispositivos donde no se adapta correctamente*/
-/*De 0 a 768px dispositivos moviles*/
-@media (max-width: 768px) { 
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .section-register{
-    width: 500px;
-    height: 100%;
-  }
-  #titleRegister{
-  margin-right: 10% ;
-  }
-  .form-register{
-    grid-template-rows: 40% 60%;
-    gap: 1%
-  }
-  .logoRegister{
-    width: 60%;
-    height: 100%;
-    }
-  .input-email{
-   width: 140px;
-   margin-left: 10%;
-   margin-top: 5%;
-  }
-  .input-pass{
-    width: 140px;
-    margin-right: 10%;
-    margin-top: 5%;
-  }
-  .button-register{
-    width: 120px;
-    font-size: 1em;
-    margin-left: 10%;
-  }
-
-  .buttonReturnRegister{
-    width: 120px; 
-    font-size: 1em;
-    margin-right: 10%;
-  }
-
-}
-/*De 769px (tabletas) hasta 1024px (computadoras medianas*/
-@media (min-width: 769px) and (max-width: 1024px){
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .section-register{
-    width: 100%;
-    height: 100%;
-  }
-
-  #titleRegister{
-  margin-right: 10%;
-  font-size: xx-large;
-  padding-top: 3%;
-  height: 30%;
-  }
-  
-  .logoRegister{
-    width: 60%;
-    height: 110%;
-    }
-
-  .input-email{
-   width: 260px;
-   height: 40%;
-   font-size: 1.5em;
-   margin-left: 10%;
-   margin-top:15%;
-  }
-  .input-pass{
-    width: 260px;
-    height: 40%;
-    font-size: 1.5em;
-    margin-right: 10%;
-    margin-top:15%;
-  }
-  .button-register{
-    width: 200px;
-    height: 40%;
-    font-size: 1.5em;
-    margin-left: 15%
-  }
-
-  .buttonReturnRegister{
-    width: 200px;
-    height: 40%;
-    font-size: 1.5em;
-    margin-right: 15%
-  }
-
-}
-  
-/*De 1025px (computadora mediana hasta de escritorio)*/
-@media (min-width: 1025px){
-  
-  .section-register{
-  max-width: 600px;
-  justify-content: center;
-  }
-
-  #titleRegister{
-    margin-right: 10%;
-    font-size: xx-large;
-    height: 32%;
-    }
-    
-    .logoRegister{
-      width: 60%;
-      height: 130%;
-      }
-  
-    .input-email{
-     width: 260px;
-     height: 40%;
-     font-size: 1.5em;
-     margin-left: 10%;
-     margin-top:15%;
-    }
-    .input-pass{
-      width: 260px;
-      height: 40%;
-      font-size: 1.5em;
-      margin-right: 10%;
-      margin-top:15%;
-    }
-    .button-register{
-      width: 200px;
-      height: 40%;
-      font-size: 1.2em;
-      margin-left: 15%
-    }
-  
-    .buttonReturnRegister{
-      width: 200px;
-      height: 40%;
-      font-size: 1.2em;
-      margin-right: 15%
-    }
-  
-  }
-
-
-/*Aqui terminan los estilos para el register*/
 
 /*Aqui empiezan los estilos para el home*/
 .sectionHome {
@@ -311,7 +36,7 @@ body {
   justify-content: center;
   align-content: center;
   gap: 1em;
-  margin-top: 20%;
+  padding-top: 45%;
 }
 
 .btn-login {
@@ -343,8 +68,8 @@ body {
   cursor: pointer;
   transition: .7s;
   box-shadow: 0 6px 0 #f7c82e;
-  padding-left: 30px;
-  padding-right: 30px
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .btn-register:active {
@@ -353,465 +78,380 @@ body {
 }
 
 
-/*De 0 a 768px dispositivos moviles*/
+/*De 0 a 768px dispositivos moviles para el HOME*/
 @media (max-width: 767px) {
-  
+
   .sectionHome {
-  background-image: url(./views/back.jpg);
-  background-position: center center;
-  background-size: cover;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 50% 50%;
-  width: 500px;
-  height: 100%;
+    background-image: url(./views/back.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    width: 500px;
+    height: 100%;
   }
-  .logoHome{
+
+  .logoHome {
     grid-row: 1;
     width: 70%;
     height: 80%;
     justify-self: center;
   }
 
-  .btn-register {
-    height: 1.8em;
-    width: 5em;
-    font-size: 1.8em;
-  }
-  .btn-login{
-    height: 1.8em;
-    width: 5em;
-    font-size: 1.8em;
-  }
-
-
 }
 
-
-/*De 769px (tabletas) hasta 1024px (computadoras medianas*/
+/*De 769px (tabletas) hasta 1024px (computadoras medianas) para el HOME*/
 @media (min-width: 768px) and (max-width: 1024px) {
-  .logoHome{
+  .logoHome {
     grid-row: 1;
-    width: 60%;
+    width: 50%;
+    height: 70%;
+    justify-self: center;
+  }
+
+  .btn-register {
+    height: 2em;
+    width: 6em;
+    font-size: 1.5em;
+  }
+
+  .btn-login {
+    height: 2em;
+    width: 6em;
+    font-size: 1.5em;
+  }
+}
+
+/*De 1025px (computadora mediana hasta de escritorio) para el HOME*/
+@media (min-width: 1025px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .sectionHome {
+    max-width: 600px;
+    justify-content: center;
+  }
+
+  .logoHome {
+    grid-row: 1;
+    width: 80%;
     height: 80%;
     justify-self: center;
   }
 
   .btn-register {
-    height: 3em;
-    width: 7em;
-    font-size: 2em;
-  }
-  .btn-login{
-    height: 3em;
-    width: 7em;
-    font-size: 2em;
+    height: 2em;
+    width: 6em;
+    font-size: 1.5em;
   }
 
-
+  .btn-login {
+    height: 2em;
+    width: 6em;
+    font-size: 1.5em;
   }
-
-/*De 1025px (computadora mediana hasta de escritorio)*/
-@media (min-width: 1025px) {
-body{
-  background-color: #F4D160; /*no recuerdo el color*/
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  height:100vh;
 }
 
-.sectionHome{
-max-width: 600px;
-justify-content: center;
-}
-
-.logoHome{
-  grid-row: 1;
-  width: 65%;
-  height: 85%;
-  justify-self: center;
-}
-
-
-.btn-register {
-  height: 2.5em;
-  width: 6em;
-  font-size: 2em;
-}
-.btn-login{
-  height: 2.5em;
-  width: 6em;
-  font-size: 2em;
-}
-}
 /*Aqui terminan los estilos para el home*/
 
 
-/*Dog Form*/
-.section-dogform{
-  background-color: whitesmoke;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 10% 30% 50% 10%;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-}
 
-.section-dogform .img3{
-  width: 100%;
-  height: 100%;
-  grid-column: 1/2;
-  grid-row: 2;
-  object-fit: cover;
-}
 
-.titleDogForm{
-  grid-column: 1/2;
+/*Aqui empiezan los estilos para el register*/
+
+.logoRegister {
+  grid-row: 1;
+  grid-column: 1;
+  width: 50%;
+  height: 100%;
   justify-self: center;
-  padding-top: 5%;
-  border-radius: 25%;
-  width: 25%;
-  background-color:#1D5D9B;
-  color: aliceblue;
- }
-
-.dogForm{
-  grid-row:3;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto auto;
-  gap: .5em;
-  margin-top: 2%;
- }
-
-.inputId{
- grid-column: 1/3;
- border-radius: 20px;
- background-color: #F4D160;
- margin-left: 5%;
- margin-right: 5%;
- border: none;
- font-weight: bold;
- text-indent: 5%;
 }
 
-.inputId::placeholder{
-  font-weight: bold;
-  text-indent: 5%;
-  color: black;
-}
-
-.inputAge{
-  grid-column: 1;
-  border-radius: 20px;
-  background-color: #F4D160;
-  margin-left: 10%;
-  border: none;
-  font-weight: bold;
-  text-indent: 10%;
-} 
-
-.inputAge::placeholder{
-  color:black;
-  font-weight: bold;
-  text-indent: 10%;
-}
-
-.inputGender{
+#titleRegister {
   grid-column: 2;
-  border-radius: 20px;
-  background-color: #F4D160;
-  margin-right: 10%;
-  border: none;
-  font-weight: bold;
-  text-indent: 10%;
-}
-
-.inputGender::placeholder{
-  color:black;
-  font-weight: bold;
-  text-indent: 10%;
-}
-
-.inputDogBreed{
-  grid-column: 1;
-  border-radius: 20px;
-  background-color: #F4D160;
-  margin-left: 10%;
-  border: none;
-  font-weight: bold;
-  text-indent: 10%;
-}
-
-.inputDogBreed::placeholder{
-  color:black;
-  font-weight: bold;
-  text-indent: 10%;
-}
-
-.inputWeight{
-  grid-column: 2;
-  border-radius: 20px;
-  background-color: #F4D160;
-  margin-right: 10%;
-  border: none;
-  font-weight: bold;
-  text-indent: 10%;
-}
-
-.inputWeight::placeholder{
-  color:black;
-  font-weight: bold;
-  text-indent: 10%;
-}
-
-.divVaccines{
-  grid-column: 1/3;
-  border-radius: 20px;
-  background-color: #F4D160;
-  margin-left: 5%;
-  margin-right: 5%;
-  text-indent: 5%;
-  font-weight: 600;
-  font-size: small ;
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.divSterilized{
-  grid-column: 1/3;
-  border-radius: 20px;
-  background-color: #F4D160;
-  margin-left: 5%;
-  margin-right: 5%;
-  text-indent: 5%;
-  font-weight: 600;
-  font-size: small ;
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.buttonSubmit{
-  grid-column: 1/3;
+  grid-row: 1;
+  font-size: 1.5em;
   background-color: #F4D160;
   color: rgb(0, 0, 0);
   height: 35px;
-  width: 104px;
+  border-radius: .5em;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.section-register {
+  background-image: url(./views/registerimg.jpg);
+  background-position: center center;
+  display: grid;
+  grid-template-rows: 20% 30% 50%;
+  grid-template-columns: 50% 50%;
+  background-size: cover;
+  max-width: 100%;
+  position: relative;
+  height: 100%;
+  text-align: right;
+}
+
+.form-register {
+  grid-column: 1/3;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.input-email {
+  background-color: #1D5D9B;
+  color: aliceblue;
+  height: 35px;
+  width: 90%;
   border: none;
   outline: none;
   border-radius: .5em;
   cursor: pointer;
-  margin-left: 5%;
-  margin-right: 5%;
+  transition: .7s;
+  padding-left: 30px;
+}
+
+.input-email::placeholder {
+  color: aliceblue;
+  font-weight: normal;
+}
+
+
+
+.input-pass {
+  background-color: #1D5D9B;
+  color: aliceblue;
+  height: 35px;
+  width: 10%;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+  padding-left: 30px;
+  font-size: 1em;
+}
+
+
+.input-pass::placeholder {
+  color: aliceblue;
+  font-weight: normal;
+}
+
+.button-register {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
   transition: .7s;
   box-shadow: 0 6px 0 #f7c82e;
   padding-left: 30px;
-  padding-right: 30px;
-  justify-self: center;
+  padding-right: 30px
 }
 
-.buttonReturnDog{
-  grid-column: 1/3;
-  grid-row: 4;
-  background-color: #75C2F6;
+.buttonReturnRegister {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #F4D160;
   color: rgb(0, 0, 0);
   height: 35px;
-  width: 104px;
+  width: 60%;
   border: none;
   outline: none;
   border-radius: .5em;
   cursor: pointer;
-  margin-left: 5%;
-  margin-right: 5%;
   transition: .7s;
-  box-shadow: 0 6px 0 #2aa0ee;
+  box-shadow: 0 6px 0 #f7c82e;
   padding-left: 30px;
-  padding-right: 30px;
-  justify-self: center;
+  padding-right: 30px
 }
-@media (max-width: 767px) {
 
-  body{
+.buttonReturnRegister:active {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+/*Aqui empiezan las medias de los dispositivos donde no se adapta correctamente*/
+/*De 0 a 768px dispositivos moviles para el REGISTER*/
+@media (max-width: 768px) {
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
 
-
-  .section-dogform{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 10% 30% 50% 10%;
+  .section-register {
+    width: 500px;
+    height: 100%;
   }
 
-  .dogForm{
-    gap: 1em;
-    margin-top: 2%;
-    
-   }
-
-   .titleDogForm{
-    border-radius: 1em;
-    width: 30%;
-    text-align:center;
-    height: 95%;
-    margin-top: .5%;
-   }
-  
-  .inputId{
-   width: 90%;
-   padding-left: 1%;
-  }
-  
-  .inputId::placeholder{
-    font-weight: bold;
-    padding-left: 1%;
-    color: black;
-  }
-  
-  .inputAge{
-    width: 90%;
-  } 
-  
-  .inputAge::placeholder{
-    padding-left: 5%;
-  }
-  
-  .inputGender{
-    width: 90%;
-  }
-    .inputDogBreed{
-    width: 90%;
-  }
-  
-  .inputDogBreed::placeholder{
-    padding-left: 3%;
-  }
- 
-  .inputWeight{
-    width: 90%;
-  }
-    
-  .divVaccines{
-    width: 90%;;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  #titleRegister {
+    margin-right: 10%;
   }
 
-  .labelVaccines{ /*falta centrar*/
-   text-align: center;
+  .form-register {
+    grid-template-rows: 40% 60%;
+    gap: 1%
   }
-  
-  .divSterilized{
-    width: 90%;;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .buttonReturnDog{
-   justify-self: center;
 
+  .logoRegister {
+    width: 60%;
+    height: 100%;
   }
+
+  .input-email {
+    width: 140px;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+
+  .input-pass {
+    width: 140px;
+    margin-right: 10%;
+    margin-top: 5%;
+  }
+
+  .button-register {
+    width: 120px;
+    font-size: 1em;
+    margin-left: 10%;
+  }
+
+  .buttonReturnRegister {
+    width: 120px;
+    font-size: 1em;
+    margin-right: 10%;
+  }
+
 }
 
-@media (min-width: 769px) and (max-width: 1024px){
-  body{
+/*De 769px (tabletas) hasta 1024px (computadoras medianas)para el REGISTER**/
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-     }
+  }
 
-
-  .section-dogform{
-    justify-items: center;
+  .section-register {
     width: 100%;
     height: 100%;
   }
 
-  .dogForm{
-    gap: 1em;
-    margin-top: 2%;
-    
-   }
+  #titleRegister {
+    margin-right: 10%;
+    font-size: xx-large;
+    padding-top: 3%;
+    height: 30%;
+  }
 
-   .titleDogForm{
-    border-radius: 1em;
-    width: 30%;
-    text-align:center;
-    height: 95%;
-    margin-top: .5%;
-   }
-  
-  .inputId{
-   width: 90%;
-   padding-left: 1%;
+  .logoRegister {
+    width: 60%;
+    height: 110%;
   }
-  
-  .inputId::placeholder{
-    font-weight: bold;
-    padding-left: 1%;
-    color: black;
+
+  .input-email {
+    width: 260px;
+    height: 40%;
+    font-size: 1.2em;
+    margin-left: 10%;
+    margin-top: 15%;
+
   }
-  
-  .inputAge{
-    width: 90%;
-  } 
-  
-  .inputAge::placeholder{
-    padding-left: 5%;
+
+  .input-pass {
+    width: 260px;
+    height: 40%;
+    font-size: 1.2em;
+    margin-right: 10%;
+    margin-top: 15%;
   }
-  
-  .inputGender{
-    width: 90%;
+
+  .button-register {
+    width: 200px;
+    height: 40%;
+    font-size: 1.3em;
+    margin-left: 15%
   }
-    .inputDogBreed{
-    width: 90%;
+
+  .buttonReturnRegister {
+    width: 200px;
+    height: 40%;
+    font-size: 1.3em;
+    margin-right: 15%
   }
-  
-  .inputDogBreed::placeholder{
-    padding-left: 3%;
-  }
- 
-  .inputWeight{
-    width: 90%;
-  }
-    
-  .divVaccines{
-    width: 90%;;
-    display:flex;
-    align-items: center;
+
+}
+
+/*De 1025px (computadora mediana hasta de escritorio)para el REGISTER**/
+@media (min-width: 1025px) {
+
+  .section-register {
+    max-width: 600px;
     justify-content: center;
-    text-align: center;
   }
 
-  .labelVaccines{ /*falta centrar*/
-   text-align: center;
+  #titleRegister {
+    margin-right: 10%;
+    font-size: 1.5em;
+    height: 32%;
+    padding-top: 2%;
   }
-  
-  .divSterilized{
-    width: 90%;;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .buttonReturnDog{
-   justify-self: center;
 
+  .logoRegister {
+    width: 60%;
+    height: 130%;
   }
+
+  .input-email {
+    width: 260px;
+    height: 40%;
+    font-size: 1em;
+    margin-left: 10%;
+    margin-top: 15%;
+  }
+
+  .input-pass {
+    width: 260px;
+    height: 40%;
+    font-size: 1em;
+    margin-right: 10%;
+    margin-top: 15%;
+  }
+
+  .button-register {
+    height: 2em;
+    width: 60%;
+    font-size: 1.1em;
+    margin-left: 15%
+  }
+
+  .buttonReturnRegister {
+    height: 2em;
+    font-size: 1.1em;
+    margin-right: 15%
+  }
+
 }
 
 
-
-/*aqui terminamos el Dogform*/
+/*Aqui terminan los estilos para el register*/
 
 
 /*aqui empezamos los estilos del login*/
@@ -834,46 +474,50 @@ justify-content: center;
   height: 90%;
 }
 
-#titleLogin{
+#titleLogin {
   grid-row: 2;
-  font-weight: bold; 
-  color:aliceblue;
-  font-size:2.5em;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 2.5em;
   height: 35px;
   text-align: center;
   align-self: center;
 }
+
 .formLogin {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 47.5% 47.5%;
   grid-template-rows: 33% 33% 33%;
   gap: 5%;
   justify-items: center;
 }
+
 /*Inputs Login*/
-.inputEmail {
+.inputEmailLogin {
   grid-column: 1/3;
   height: 25px;
-  width: 15em;
+  width: 80%;
   border: none;
   outline: none;
   border-radius: .5em;
   box-shadow: 0 6px 0 #cf804b;
   align-self: self-end;
-  font-weight: bolder;
+  padding-left: 5%;
+
 }
 
-.inputPassword {
+.inputPasswordLogin {
   grid-column: 1/3;
   height: 25px;
-  width: 15em;
+  width: 80%;
   border: none;
   outline: none;
   border-radius: .5em;
   box-shadow: 0 6px 0 #cf804b;
-  font-weight: bolder;
   align-self: center;
+  padding-left: 5%;
 }
+
 .button-login {
   grid-column: 1/3;
   background-color: #D97E4A;
@@ -887,7 +531,6 @@ justify-content: center;
   box-shadow: 0 6px 0 #fa7528;
   padding-left: 30px;
   padding-right: 30px;
-  width: 110px;
 }
 
 .button-login:active {
@@ -896,11 +539,9 @@ justify-content: center;
 }
 
 .buttonReturnLogin {
- 
   background-color: #D97E4A;
   color: rgb(0, 0, 0);
   height: 35px;
-  width: 110px;
   border: none;
   outline: none;
   border-radius: .5em;
@@ -910,172 +551,491 @@ justify-content: center;
   padding-left: 30px;
   padding-right: 30px;
   justify-self: center;
-  margin-left: 5%;
   margin-top: 5%;
 }
+
 .buttonReturnLogin:active {
   box-shadow: none;
   transform: translateY(6px);
 }
 
-
-
 .button-google {
   background-image: url(./views/btn_google_signin_light_pressed_web.png);
-  width: 63%;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 100%;
-  height: 6vh;
+  width: 60%;
+  height: 34%;
   border: none;
-  font-weight: bold;
+  outline: none;
+  border-radius: 1em;
   cursor: pointer;
+  box-shadow: 0 6px 0 #a09995;
+  justify-self: center;
 }
 
+
+/*De 0 a 768px dispositivos moviles para el LOGIN*/
 @media (max-width: 767px) {
-}
-/*Inputs Login*/
-.inputEmail {
-  height: 35px;
-  width: 18em;
-  padding-left: 5%;
-  font-size: larger; 
+
+  .logoLogin {
+    width: fit-content;
+  }
+
+  .inputEmailLogin {
+    height: 35px;
+    font-size: larger;
+  }
+
+  .inputPasswordLogin {
+    height: 35px;
+    font-size: larger;
+  }
+
+  .button-login {
+    width: 40%;
+    font-size: 1em;
+    margin-top: 2%;
+  }
+
+  .buttonReturnLogin {
+    width: 40%;
+    font-size: 1em;
+    margin-top: 8%;
+  }
+
+  .button-google {
+    align-self: center;
+  }
 }
 
-.inputPassword {
-  height: 35px;
-  width: 18em;
-  padding-left: 5%;
-  font-size: larger;
-}
-.button-login {
-  height: 45px;
-  width: 200px;
-  font-size: 1.7em;
-  margin-top: 2%;
-}
-
-.buttonReturnLogin {
-  height: 90%;
-  width: 200px;
-  font-size: 1.7em;
-  margin-top: 10%;
-}
-.button-google{
-  align-self: center;
-}
-
-@media (min-width: 768px) and (max-width: 1024px){
+/*De 769px (tabletas) hasta 1024px (computadoras medianas)para el LOGIN*/
+@media (min-width: 768px) and (max-width: 1024px) {
   .logoLogin {
     width: 50%;
     height: 100%;
   }
 
-  #titleLogin{
+  #titleLogin {
     font-size: 4em;
   }
 
-  .inputEmail {
+  .inputEmailLogin {
     height: 70%;
     width: 60%;
     padding-left: 5%;
+    font-size: 2em;
   }
-  .input-email::placeholder{
-    font-weight: bold;
-    font-size: xx-large;
-    color: black;
-  }
-  .inputPassword {
-    height: 70%;
-    width: 60%;
-    padding-left: 5%;
-    font-size: larger;
-  }
-  .input-pass::placeholder{
-    font-weight: bold;
-    font-size: xx-large;
-    color: black;
 
+  .inputEmailLogin::placeholder {
+    font-size: 1em;
   }
+
+  .inputPasswordLogin {
+    height: 70%;
+    width: 60%;
+    padding-left: 5%;
+    font-size: 2em;
+  }
+
+  .inputPasswordLogin::placeholder {
+    font-size: 1em;
+  }
+
   .button-login {
     height: 80%;
-    width: 30%;
+    width: 35%;
     font-size: 1.7em;
     margin-top: 2%;
   }
-  
+
   .buttonReturnLogin {
-    height: 80%;
-    width: 30%;
+    height: 60%;
+    width: 35%;
     font-size: 1.7em;
     margin-top: 5%;
-  
   }
-  .button-google{
+
+  .button-google {
     align-self: center;
-    width: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
-    height: 6vh;
-    margin-bottom: 5%;
-    margin-left: 5%;
+    width: 50%;
+    height: 34%;
   }
 }
 
 
 @media (min-width: 1025px) {
-  
-  .sectionLogin{
-  max-width: 600px;
-  width: 100%;
+
+  .sectionLogin {
+    max-width: 600px;
+    width: 100%;
   }
+
   .logoLogin {
     width: 50%;
     height: 110%;
-}
-.inputEmail {
-  height: 70%;
-  width: 70%;
-  padding-left: 5%;;
-}
-.input-email::placeholder{
-  font-weight: bold;
-  font-size: xx-large;
-  color: black;
-}
-.inputPassword {
-  height: 70%;
-  width: 70%;
-  padding-left: 5%;
-  font-size: larger;
-}
-.input-pass::placeholder{
-  font-weight: bold;
-  font-size: xx-large;
-  color: black;
+  }
 
-}
-.button-login {
-  height: 80%;
-  width: 30%;
-  font-size: 1.2em;
-  margin-top: 2%;
+  .inputEmailLogin {
+    height: 70%;
+    width: 80%;
+    padding-left: 5%;
+    font-size: 1.3em;
+  }
+
+  .inputEmailLogin::placeholder {
+    font-size: 1em;
+  }
+
+  .inputPasswordLogin {
+    height: 70%;
+    width: 80%;
+    padding-left: 5%;
+    font-size: 1.3em;
+  }
+
+  .inputPasswordLogin::placeholder {
+    font-size: 1em;
+  }
+
+  .button-login {
+    height: 80%;
+    width: 40%;
+    font-size: 1.4em;
+    margin-top: 2%;
+  }
+
+  .buttonReturnLogin {
+    height: 60%;
+    width: 40%;
+    font-size: 1.4em;
+    margin-top: 5%;
+  }
+
+  .button-google {
+    align-self: center;
+    width: 50%;
+    height: 34%;
+  }
 }
 
-.buttonReturnLogin {
-  height: 80%;
-  width: 30%;
-  font-size: 1.2em;
-  margin-top: 5%;
-}
-.button-google{
-  align-self: center;
-  width: 250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 10vh;
-}
-
-}
 /*Termina diseño de Login*/
+
+/*Dog Form*/
+.section-dogform {
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 8% 30% 52% 10%;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+}
+
+.titleDogForm {
+  grid-column: 1/2;
+  grid-row: 1;
+  border-radius: 1em;
+  width: 30%;
+  height: 100%;
+  background-color: #1D5D9B;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 2%;
+
+}
+
+.section-dogform .logoDogForm {
+  grid-column: 1/2;
+  grid-row: 2;
+  z-index: 5;
+  height: 100%;
+  width: 50%;
+  justify-self: first baseline;
+
+}
+
+.section-dogform .img3 {
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 2;
+  object-fit: cover;
+}
+
+
+.dogForm {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: .5em;
+  margin-top: 2%;
+  justify-items: center;
+}
+
+.inputId {
+  grid-column: 1/3;
+  border-radius: 20px;
+  background-color: #F4D160;
+  width: 80%;
+  border: none;
+  padding-left: 3%;
+}
+
+.inputId::placeholder {
+  padding-left: 3%;
+}
+
+.inputAge {
+  grid-column: 1/2;
+  grid-row: 2;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #F4D160;
+  border: none;
+  justify-self: end;
+  padding-left: 5%;
+}
+
+.inputAge::placeholder,
+.inputGender::placeholder,
+.inputDogBreed::placeholder,
+.inputWeight::placeholder {
+  padding-left: 5%;
+}
+
+.inputGender {
+  grid-column: 2/3;
+  grid-row: 2;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #F4D160;
+  border: none;
+  justify-self: start;
+  padding-left: 5%;
+}
+
+.inputDogBreed {
+  grid-column: 1/2;
+  grid-row: 3;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #F4D160;
+  border: none;
+  justify-self: end;
+  padding-left: 5%;
+}
+
+.inputWeight {
+  grid-column: 2/3;
+  grid-row: 3;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #F4D160;
+  border: none;
+  justify-self: start;
+  padding-left: 5%;
+}
+
+.divVaccines {
+  grid-column: 1/3;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #F4D160;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.divSterilized {
+  grid-column: 1/3;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #F4D160;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.buttonSubmit {
+  grid-column: 1/3;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  width: 104px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+  box-shadow: 0 6px 0 #f7c82e;
+}
+
+.buttonReturnDog {
+  grid-column: 1/3;
+  grid-row: 4;
+  background-color: #75C2F6;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  width: 104px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+  box-shadow: 0 6px 0 #2aa0ee;
+}
+
+/*De 0 a 768px dispositivos moviles para el DOGFORM*/
+@media (max-width: 767px) {
+
+  .titleDogForm {
+    padding-top: 3%;
+  }
+
+  .radio {
+    padding-top: 15%;
+    padding-left: 15%;
+    font-size: small;
+  }
+
+  .inputRadio {
+    width: 50%;
+    height: 50%;
+  }
+
+  .buttonReturnDog {
+    justify-self: first baseline;
+    justify-self: center;
+    margin-left: 2%;
+  }
+}
+
+/*De 769px (tabletas) hasta 1024px (computadoras medianas)para el DOGFORM*/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .titleDogForm {
+    border-radius: 1em;
+    width: 30%;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 2.5em;
+  }
+
+  .dogForm {
+    gap: 1.2em;
+    margin-top: 2%;
+
+  }
+
+  .inputId,
+  .inputAge,
+  .inputDogBreed,
+  .inputWeight {
+    font-size: x-large;
+  }
+
+
+  .inputGender {
+    padding-left: 5%;
+    font-size: x-large;
+  }
+
+  .inputDogBreed::placeholder {
+    padding-left: 5%;
+    font-size: x-large;
+  }
+
+  .radio {
+    padding-top: 15%;
+    padding-left: 15%;
+    font-size: x-large;
+  }
+
+  .inputRadio {
+    height: 50%;
+    width: 50%;
+  }
+
+  .buttonSubmit {
+    height: 35px;
+    width: 60%;
+    font-size: x-large;
+  }
+
+  .buttonReturnDog {
+    height: 35px;
+    width: 62%;
+    font-size: x-large;
+    margin-left: 2%;
+  }
+}
+
+/*De 1025px (computadora mediana hasta de escritorio)para eL DOGFORM**/
+@media (min-width: 1025px) {
+  .section-dogform {
+    max-width: 600px;
+    justify-content: center;
+  }
+
+  .titleDogForm {
+    padding-top: 2%;
+    font-size: 1.8em;
+  }
+
+  .section-dogform .logoDogForm {
+    height: 120%;
+    width: 40%;
+    margin-left: 10%;
+  }
+
+
+
+  .inputId,
+  .inputId::placeholder,
+  .inputAge,
+  .inputAge::placeholder,
+  .inputGender,
+  .inputGender::placeholder,
+  .inputDogBreed,
+  .inputDogBreed::placeholder,
+  .inputWeight,
+  .inputWeight::placeholder,
+  .radio,
+  .buttonSubmit,
+  .buttonReturnDog {
+    font-size: large;
+  }
+
+  .inputRadio {
+    width: 50%;
+    height: 50%;
+  }
+
+  .radio {
+    padding-top: 15%;
+    padding-left: 15%;
+
+  }
+
+  .buttonSubmit {
+    height: 35px;
+    width: 60%;
+
+  }
+
+  .buttonReturnDog {
+
+    height: 35px;
+    width: 61%;
+    margin-left: 1%;
+  }
+
+}
+
+
+/*aqui terminamos el Dogform*/
