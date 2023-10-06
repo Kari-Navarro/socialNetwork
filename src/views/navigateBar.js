@@ -1,14 +1,16 @@
 function navBar(navigateTo) {
   const barBox = document.createElement('section');
-  barBox.className = 'barBox';
+  barBox.classList.add('barBox');
   const feedButton = document.createElement('button');
   feedButton.textContent = 'Feed';
-  feedButton.id = 'feedbutton';
+  feedButton.classList.add('feedbutton');
   feedButton.className = 'navigation-buttons';
+  feedButton.setAttribute('type', 'click');
   const profileButton = document.createElement('button');
   profileButton.textContent = 'Profile';
   profileButton.className = 'navigation-buttons';
-  profileButton.id = 'profilebutton';
+  profileButton.classList.add('profilebutton');
+  profileButton.setAttribute('type', 'click');
 
   feedButton.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -21,6 +23,7 @@ function navBar(navigateTo) {
   });
 
   barBox.append(feedButton, profileButton);
+
   return barBox;
 }
 

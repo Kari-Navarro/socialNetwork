@@ -11,8 +11,13 @@ import {
 } from 'firebase/auth';
 import { auth } from './firebase.js';
 
+// Funcion para actualizar el usuario
+const updateCurrentUser = async (completeUserName) => {
+  await updateProfile(auth.currentUser, { displayName: completeUserName });
+};
+
 // Funcion para crear nuevos usurios, recibe email y contraseña
-const signUpUser = async (email, password) => {
+const signUpUser = async (inputUserName, email, password) => { // aqui va username
   try {
     // Invocamos al servicio de firebase
     const userCredential = await createUserWithEmailAndPassword(
@@ -20,6 +25,7 @@ const signUpUser = async (email, password) => {
       email,
       password,
     );
+    updateCurrentUser(inputUserName); // aqui pasamos username
     localStorage.setItem('user', userCredential.user);
 
     return userCredential;
@@ -108,10 +114,6 @@ const signOutUser = async () => {
     return alert('Something wrong happened, please try again.');
   }
   // termina función de cierre de sesión
-};
-// Funcion para actualizar el usuario
-const updateCurrentUser = async (completeUserName) => {
-  await updateProfile(auth.currentUser, { displayName: completeUserName });
 };
 
 /* const updateOutput = (outputElement, message) => {

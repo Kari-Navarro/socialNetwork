@@ -5,6 +5,8 @@ import error from './views/error.js';
 import login from './views/login.js';
 import dogRegister from './views/dogform.js';
 import feed from './views/feed.js';
+import post from './views/post.js';
+import navBar from './views/navigateBar.js';
 
 const routes = [
   { path: '/', component: home },
@@ -13,12 +15,14 @@ const routes = [
   { path: '/login', component: login },
   { path: '/dogform', component: dogRegister },
   { path: '/feed', component: feed },
+  { path: '/post', component: post },
+  { path: '/navBar', component: navBar },
 ];
 const defaultRoute = '/';
 const root = document.getElementById('root');
 
-function navigateTo(hash) {
-  const route = routes.find((routeFound) => routeFound.path === hash);
+function navigateTo(pathName) {
+  const route = routes.find((routeFound) => routeFound.path === pathName);
 
   if (route && route.component) {
     window.history.pushState(
