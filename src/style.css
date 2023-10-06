@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #f7ecba;
+  background-color:#f7ecba !important ;
 }
 
 #root {
@@ -37,6 +37,19 @@ body {
   align-content: center;
   gap: 1em;
   padding-top: 45%;
+}
+.barBox{
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+  gap: 1em;
+  padding-top:10%;
+}
+.footer{
+  margin-top: 3em;
 }
 
 .btn-login {
@@ -76,7 +89,6 @@ body {
   box-shadow: none;
   transform: translateY(6px);
 }
-
 
 /*De 0 a 768px dispositivos moviles para el HOME*/
 @media (max-width: 767px) {
@@ -164,7 +176,8 @@ body {
 
 /*Aqui empiezan los estilos para el register*/
 
-.logoRegister {
+.logoRegister,
+.logoFeed {
   grid-row: 1;
   grid-column: 1;
   width: 50%;
@@ -207,7 +220,8 @@ body {
   justify-items: center;
 }
 
-.input-email {
+.input-email,
+.inputUserName {
   background-color: #1D5D9B;
   color: aliceblue;
   height: 35px;
@@ -220,7 +234,8 @@ body {
   padding-left: 30px;
 }
 
-.input-email::placeholder {
+.input-email::placeholder,
+.inputUserName::placeholder {
   color: aliceblue;
   font-weight: normal;
 }
@@ -247,7 +262,8 @@ body {
   font-weight: normal;
 }
 
-.button-register {
+.button-register,
+.submitButton {
   grid-column: 1;
   grid-row: 2;
   background-color: #F4D160;
@@ -309,12 +325,14 @@ body {
     gap: 1%
   }
 
-  .logoRegister {
+  .logoRegister,
+  .logoFeed {
     width: 60%;
     height: 100%;
   }
 
-  .input-email {
+  .input-email,
+  .inputUserName {
     width: 140px;
     margin-left: 10%;
     margin-top: 5%;
@@ -331,6 +349,13 @@ body {
     font-size: 1em;
     margin-left: 10%;
   }
+  .submitButton{
+    width: 30%;
+    height: 20%;
+    font-size: 1em;
+    margin-left: 70%;
+  }
+
 
   .buttonReturnRegister {
     width: 120px;
@@ -361,12 +386,14 @@ body {
     height: 30%;
   }
 
-  .logoRegister {
+  .logoRegister,
+  .logoFeed {
     width: 60%;
     height: 110%;
   }
 
-  .input-email {
+  .input-email,
+  .inputUserName {
     width: 260px;
     height: 40%;
     font-size: 1.2em;
@@ -388,6 +415,12 @@ body {
     height: 40%;
     font-size: 1.3em;
     margin-left: 15%
+  }
+  .submitButton{
+    width: 100px;
+    height: 20%;
+    font-size: 1em;
+    margin-left: 87%
   }
 
   .buttonReturnRegister {
@@ -414,12 +447,14 @@ body {
     padding-top: 2%;
   }
 
-  .logoRegister {
+  .logoRegister,
+  .logoFeed {
     width: 60%;
     height: 130%;
   }
 
-  .input-email {
+  .input-email,
+  .inputUserName {
     width: 260px;
     height: 40%;
     font-size: 1em;
@@ -440,6 +475,12 @@ body {
     width: 60%;
     font-size: 1.1em;
     margin-left: 15%
+  }
+  .submitButton {
+height: 1em;
+width: 20%;
+font-size: 1em;
+margin-left: 80%;
   }
 
   .buttonReturnRegister {
@@ -467,7 +508,16 @@ body {
   width: 100%;
   height: 100%;
 }
-
+.sectionFeed{
+  background-position: center center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 35% 10% 20% 10% 25%;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+}
 .logoLogin {
   grid-row: 1;
   width: 70%;
@@ -665,7 +715,8 @@ body {
 
 @media (min-width: 1025px) {
 
-  .sectionLogin {
+  .sectionLogin,
+  .sectionFeed {
     max-width: 600px;
     width: 100%;
   }
