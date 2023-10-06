@@ -96,7 +96,6 @@ function dogRegister(navigateTo) {
   inputVaccinesN.type = 'radio';
   inputVaccinesN.classList = 'inputRadio';
 
-
   const divSterilized = document.createElement('div');
   divSterilized.classList.add('divSterilized');
   labelSterilized.textContent = 'Sterilized: ';

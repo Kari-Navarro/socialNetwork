@@ -3,35 +3,41 @@ import { db, auth } from '../firebase/firebase';
 
 const pub = collection(db, 'Post');
 
-function addPost() {
+function post(navigateTo) {
   const user = auth.currentUser;
   // const userID = user.uid;
-
   const sectionPost = document.createElement('section');
+  sectionPost.classList.add('sectionPost');
   const textarea = document.createElement('textarea');
-  textarea.className = 'textPost';
+  textarea.classList.add('textarea');
   textarea.placeholder = 'Write your post here...';
   const submitButton = document.createElement('button');
+  submitButton.classList.add('submitButton');
+  submitButton.setAttribute('type', 'button');
   submitButton.textContent = 'Submit';
+  let textareaValue = '';
+  textarea.addEventListener('keydown', (e) => {
+    textareaValue = e.target.value;
+  });
 
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();
-    if (textarea.value !== '') {
-      {
-        const content = 'Please write something';
-        sectionPost.append(content);
-      }
+    if (textareaValue !== '') {
       addDoc(pub, {
         date: new Date(),
-        text: sectionPost.text.value,
+        text: textareaValue,
         UserName: user.displayName,
+        // UserID: userID,
       });
-      textarea.value = '';
+      navigateTo('/feed');
+    } else {
+      const content = 'Please write something';
+      sectionPost.append(content);
     }
   });
 
-  sectionPost.appendChild(textarea, submitButton);
+  sectionPost.append(textarea, submitButton);
 
   return sectionPost;
 }
-export default addPost;
+export default post;
