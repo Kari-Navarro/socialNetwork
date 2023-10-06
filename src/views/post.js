@@ -7,14 +7,16 @@ function addPost() {
   const user = auth.currentUser;
   // const userID = user.uid;
 
-  const sectionPost = document.createElement('section');
+  const sectionPost = document.createElement('div');
   const textarea = document.createElement('textarea');
   textarea.className = 'textPost';
   textarea.placeholder = 'Write your post here...';
+  
   const submitButton = document.createElement('button');
   submitButton.textContent = 'Submit';
+  submitButton.classList.add('submit-textarea');
 
-  submitButton.addEventListener('click', (e) => {
+  submitButton.addEventListener('submit', (e) => {
     e.preventDefault();
     if (textarea.value !== '') {
       {

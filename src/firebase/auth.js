@@ -63,9 +63,8 @@ const loginUser = async (email, password) => {
 
 const loginWithGoogle = async () => {
   try {
-    // Inicializamos googleAuth
     const provider = new GoogleAuthProvider();
-    // Invocamos el modal de iniciar sesion con google
+
     const userCredential = await signInWithPopup(auth, provider);
     localStorage.setItem('user', userCredential);
     return userCredential;
