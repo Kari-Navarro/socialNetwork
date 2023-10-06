@@ -19,6 +19,7 @@ function post(navigateTo) {
   textarea.addEventListener('keydown', (e) => {
     textareaValue = e.target.value;
   });
+  console.log(user);
 
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ function post(navigateTo) {
       addDoc(pub, {
         date: new Date(),
         text: textareaValue,
-        UserName: user.displayName,
+        UserName: user.email,
         // UserID: userID,
       });
       navigateTo('/feed');
