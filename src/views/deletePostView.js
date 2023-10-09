@@ -3,13 +3,13 @@ import {
 } from 'firebase/firestore';
 
 function deletePost(doc, mainSection, currentPost) {
-  const dialog = document.createElement('dialog'); // se crea diálogo
+  const dialog = document.createElement('dialog');
   dialog.setAttribute('data-testid', 'dialog');
-  const p = document.createElement('p'); // texto del diálogo
+  const p = document.createElement('p');
   p.textContent = 'Are you sure you want to delete this post?';
-  const deleteButton = document.createElement('button'); // botón de borrar
+  const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Yes';
-  const cancelButton = document.createElement('button'); // botón cancelar
+  const cancelButton = document.createElement('button');
   cancelButton.classList.add('cancel-button');
   cancelButton.textContent = 'Cancel';
 
@@ -18,20 +18,19 @@ function deletePost(doc, mainSection, currentPost) {
 
   dialog.append(p, containerButtons);
   mainSection.appendChild(dialog);
-  dialog.showModal(); // se muestra el modal (diálogo)
+  dialog.showModal();
 
   deleteButton.addEventListener('click', async (e) => {
     // botón de borrar
     e.preventDefault();
-    await deleteDoc(doc.ref); // se borra el documento de la colección
-    currentPost.remove(); // se borra post de la view
-    dialog.close(); // se cierra el diálogo
+    await deleteDoc(doc.ref);
+    currentPost.remove();
+    dialog.close();
   });
 
   cancelButton.addEventListener('click', (e) => {
-    // botón de cancelar
     e.preventDefault();
-    dialog.close(); // sólo se cierra el diálogo
+    dialog.close();
   });
   return dialog;
 }

@@ -5,7 +5,6 @@ const pub = collection(db, 'Post');
 
 function post(navigateTo) {
   const user = auth.currentUser;
-  // const userID = user.uid;
   const sectionPost = document.createElement('section');
   sectionPost.classList.add('sectionPost');
   const textarea = document.createElement('textarea');
@@ -28,7 +27,6 @@ function post(navigateTo) {
         date: new Date(),
         Content: textareaValue,
         UserName: user.email,
-        // UserID: userID,
       });
       navigateTo('/feed');
     } else {

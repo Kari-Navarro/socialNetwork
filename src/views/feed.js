@@ -5,7 +5,6 @@ import post from './post.js';
 import { ListPots } from './listPost.js';
 
 function feed(navigateTo) {
-  // const userID = user.uid;
   const sectionFeed = document.createElement('section');
   sectionFeed.classList.add('sectionFeed');
   const postView = post(navigateTo);
