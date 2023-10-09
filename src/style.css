@@ -385,7 +385,6 @@ body {
   .input-pass::placeholder {
     padding-left: 0%;
   }
-
   .button-register {
     width: 120px;
     font-size: 1em;
@@ -402,6 +401,13 @@ body {
     font-size: 1em; 
     margin-left: 70%;
   }
+
+  .submitButton {
+    width: 30%;
+    height: 20%;
+    font-size: 1em;
+  }
+
 
   .buttonReturnRegister {
     width: 120px;
@@ -502,6 +508,19 @@ body {
     font-size: 1.1em;
     margin-left: 15%
   }
+  .submitButton {
+height: 1em;
+width: 20%;
+font-size: 1em;
+margin-left: 80%;
+  }
+
+  .submitButton {
+    height: 1em;
+    width: 20%;
+    font-size: 1em;
+    margin-left: 80%;
+  }
 
   .submitButton {
     height: 1em;
@@ -553,6 +572,16 @@ body {
   height: 100%;
 }
 
+.sectionFeed {
+  background-position: center center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 35% 10% 20% 10% 25%;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+}
 .logoLogin {
   grid-row: 1;
   width: 70%;

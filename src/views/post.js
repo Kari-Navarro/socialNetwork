@@ -11,6 +11,7 @@ function post(navigateTo) {
   const textarea = document.createElement('textarea');
   textarea.classList.add('textarea');
   textarea.placeholder = 'Write your post here...';
+
   const submitButton = document.createElement('button');
   submitButton.classList.add('submitButton');
   submitButton.setAttribute('type', 'button');
@@ -20,7 +21,7 @@ function post(navigateTo) {
     textareaValue = e.target.value;
   });
 
-  submitButton.addEventListener('click', (e) => {
+  submitButton.addEventListener('submit', (e) => {
     e.preventDefault();
     if (textareaValue !== '') {
       addDoc(pub, {
