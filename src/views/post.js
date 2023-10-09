@@ -11,7 +11,7 @@ function post(navigateTo) {
   const textarea = document.createElement('textarea');
   textarea.classList.add('textarea');
   textarea.placeholder = 'Write your post here...';
-  
+
   const submitButton = document.createElement('button');
   submitButton.classList.add('submitButton');
   submitButton.setAttribute('type', 'button');
@@ -20,6 +20,7 @@ function post(navigateTo) {
   textarea.addEventListener('keydown', (e) => {
     textareaValue = e.target.value;
   });
+  console.log(user);
 
   submitButton.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -27,7 +28,7 @@ function post(navigateTo) {
       addDoc(pub, {
         date: new Date(),
         text: textareaValue,
-        UserName: user.displayName,
+        UserName: user.email,
         // UserID: userID,
       });
       navigateTo('/feed');

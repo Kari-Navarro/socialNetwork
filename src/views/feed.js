@@ -1,5 +1,5 @@
 // import { db } from '../firebase.js';
-import {
+/* import {
   query,
   collection,
   onSnapshot,
@@ -8,15 +8,16 @@ import {
 import { db } from '../firebase/firebase';
 import logo from './logo.png';
 import navBar from './navigateBar.js';
-import { signOutUser } from '../firebase/auth.js';
+import { signOutUser } from '../firebase/auth.js'; */
 import post from './post.js';
+import { ListPots } from './listPost.js';
 
 function feed(navigateTo) {
   // const userID = user.uid;
   const sectionFeed = document.createElement('section');
   sectionFeed.classList.add('sectionFeed');
   // Query a firestore a la tabla o coleccion Post ordenando por descendente
-  const q = query(collection(db, 'Post'), orderBy('Date', 'desc'));
+  // const q = query(collection(db, 'Post'), orderBy('Date', 'desc'));
   // const sectionPosts = document.createElement('section'); // Section para los post
   // sectionPosts.classList.add('sectionPosts');
 
@@ -24,11 +25,11 @@ function feed(navigateTo) {
   // postsContainer.classList.add('postsContainer');
 
   const postView = post(navigateTo);
-  sectionFeed.appendChild(postView);
-
+  /*
   onSnapshot(q, (querySnapshot) => {
     // postsContainer.innerHTML = ''; //para evitar que se dupliquen las publicaciones con el submit
     querySnapshot.forEach((doc) => {
+      console.log(doc.data());
       const onePost = document.createElement('section'); // sección individual post, para formato
       onePost.className += 'individual-post'; // asigna clase a posts individuales
 
@@ -46,6 +47,7 @@ function feed(navigateTo) {
       onePost.appendChild(userName);
       onePost.appendChild(datePost);
       onePost.appendChild(postContent);
+      sectionFeed.append(onePost);
       // postsContainer.appendChild(onePost);
     });
 
@@ -79,7 +81,8 @@ function feed(navigateTo) {
     // sectionPosts.append(postsContainer);
     sectionFeed.append(logoFeed, footer);
     footer.appendChild(navBar(navigateTo));
-  });
+  }); */
+  sectionFeed.append(postView, ListPots());
   return sectionFeed;
 
   // const signOutUser = async () => {

@@ -9,7 +9,9 @@ import {
   signOut,
   updateProfile,
 } from 'firebase/auth';
-import { auth } from './firebase.js';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { auth, db } from './firebase.js';
+
 
 // Funcion para actualizar el usuario
 const updateCurrentUser = async (completeUserName) => {
@@ -17,7 +19,7 @@ const updateCurrentUser = async (completeUserName) => {
 };
 
 // Funcion para crear nuevos usurios, recibe email y contraseña
-const signUpUser = async (inputUserName, email, password) => { // aqui va username
+const signUpUser = async (email, password) => { // aqui va username
   try {
     // Invocamos al servicio de firebase
     const userCredential = await createUserWithEmailAndPassword(
@@ -25,7 +27,7 @@ const signUpUser = async (inputUserName, email, password) => { // aqui va userna
       email,
       password,
     );
-    updateCurrentUser(inputUserName); // aqui pasamos username
+    updateCurrentUser(email); // aqui pasamos username
     localStorage.setItem('user', userCredential.user);
 
     return userCredential;
@@ -153,6 +155,7 @@ const signOutUser = async () => {
 //     console.error("Error al actualizar el nombre de usuario:", error);
 //   });
 // }
+
 export {
   signUpUser,
   loginUser,
