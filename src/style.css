@@ -12,9 +12,26 @@ body {
 }
 
 #section-listpost {
-  margin-top: 100px;
+  display: grid;
+  width: 100%;
+  height: 400%;
+  margin: 0 auto;
+  padding: 20%;
+  border: 1px solid green;
+  justify-content: space-between;
+  grid-template-rows: 100px;
+  grid-template-columns: auto auto;
 }
-
+.individual-post{
+  width: 100%;
+  height: 90%;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 150px;
+}
+.post-content {
+  grid-column: 1/2;
+}
 #root {
   display: flex;
   justify-content: center;
@@ -94,6 +111,25 @@ body {
 .btn-register:active {
   box-shadow: none;
   transform: translateY(6px);
+}
+.textarea{
+  width: 100%;
+  height: 70px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.btnOut {
+  background-color: #1D5D9B;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
 }
 
 /*De 0 a 768px dispositivos moviles para el HOME*/
@@ -359,6 +395,18 @@ body {
     height: 20%;
     font-size: 1em;
   }
+  .btnOut {
+    width: 30%;
+    height: 40%;
+    font-size: 1em; 
+    margin-left: 70%;
+  }
+
+  .submitButton {
+    width: 30%;
+    height: 20%;
+    font-size: 1em;
+  }
 
 
   .buttonReturnRegister {
@@ -411,6 +459,12 @@ body {
   .submitButton {
     width: 100px;
     height: 20%;
+    font-size: 1em;
+    margin-left: 87%
+  }
+  .btnOut {
+    width: 100px;
+    height: 30%;
     font-size: 1em;
     margin-left: 87%
   }
@@ -468,6 +522,19 @@ margin-left: 80%;
     margin-left: 80%;
   }
 
+  .submitButton {
+    height: 1em;
+    width: 20%;
+    font-size: 1em;
+    margin-left: 80%;
+  }
+  .btnOut {
+    height: 2em;
+    width: 20%;
+    font-size: 1em;
+    margin-left: 80%;
+  }
+
   .buttonReturnRegister {
     height: 2em;
     font-size: 1.1em;
@@ -479,9 +546,22 @@ margin-left: 80%;
 
 
 /*aqui empezamos los estilos del login*/
-
+.sectionFeed {
+  background-color: #ffffff;
+}
 .sectionLogin {
   background-image: url(./views/chihuahua.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 35% 10% 20% 10% 25%;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionFeed {
   background-position: center center;
   background-size: cover;
   display: grid;

@@ -17,17 +17,16 @@ function post(navigateTo) {
   submitButton.setAttribute('type', 'button');
   submitButton.textContent = 'Submit';
   let textareaValue = '';
-  textarea.addEventListener('keydown', (e) => {
+  textarea.addEventListener('keyup', (e) => {
     textareaValue = e.target.value;
   });
-  console.log(user);
 
   submitButton.addEventListener('submit', (e) => {
     e.preventDefault();
     if (textareaValue !== '') {
       addDoc(pub, {
         date: new Date(),
-        text: textareaValue,
+        Content: textareaValue,
         UserName: user.email,
         // UserID: userID,
       });

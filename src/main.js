@@ -1,4 +1,6 @@
 // Este es el punto de entrada de tu aplicacion
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase/firebase';
 import home from './views/home.js';
 import register from './views/register.js';
 import error from './views/error.js';
@@ -20,6 +22,7 @@ const routes = [
 ];
 const defaultRoute = '/';
 const root = document.getElementById('root');
+let userSession;
 
 function navigateTo(pathName) {
   const route = routes.find((routeFound) => routeFound.path === pathName);
@@ -34,11 +37,36 @@ function navigateTo(pathName) {
     if (root.firstChild) {
       root.removeChild(root.firstChild);
     }
-    root.appendChild(route.component(navigateTo));
+    root.appendChild(route.component(navigateTo, userSession));
   } else {
     navigateTo('/error');
   }
 }
+
+// Observador de la sesion del usuario, obtenemos primero el usuario y despues navegamos en la app
+onAuthStateChanged(auth, (user) => {
+  const userData = localStorage.getItem('user');
+  const actualRoute = window.location.pathname;
+  if (user && userData) {
+    // Si el usuario tiene una sesion iniciada, siempre lo mandaremos al feed
+    userSession = user;
+    navigateTo('/feed');
+  } else if (
+    actualRoute === '/feed'
+    || actualRoute === '/recipes'
+    || actualRoute === '/workout'
+    || actualRoute === '/profile'
+  ) {
+    // Si el usuario no tiene sesion iniciada
+    // y quiere entrar a las rutas de la app, lo mandamos a login
+    userSession = undefined;
+    navigateTo('/login');
+  } else {
+    // Si el usuario esta en /, /login, /recoverPassword o /signUp, lo dejamos en esa misma ruta
+    userSession = undefined;
+    navigateTo(actualRoute);
+  }
+});
 
 window.onpopstate = () => {
   navigateTo(window.location.pathname);

@@ -1,16 +1,15 @@
 import { collection, query, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase/firebase.js';
+import editPost from './editPostView';
+import deletePost from './deletePostView.js';
 
 export const ListPots = () => {
   const section = document.createElement('section');
   section.id = 'section-listpost';
-  const p = document.createElement('p');
-  p.textContent = ' Pruebaaaa';
 
   const q = query(collection(db, 'Post'));
   onSnapshot(q, (querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      // console.log(doc.data());
       const onePost = document.createElement('section'); // sección individual post, para formato
       onePost.className += 'individual-post'; // asigna clase a posts individuales
 
@@ -20,16 +19,26 @@ export const ListPots = () => {
       postContent.classList.add('post-content'); // contenido del post
       const userName = document.createElement('p'); // usuario que crea el post
       userName.classList.add('user-name');
+      const editButton = document.createElement('button');
+      editButton.textContent = 'Edit';
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      let editView = null;
+      editButton.addEventListener('click', () => {
+        editView = editPost(doc);
+        onePost.appendChild(editView);
+      });
+      deleteButton.addEventListener('click', () => {
+        deletePost(doc, section, onePost);
+      });
 
-      // a traves de la funcion data() obtenemos el valor de UserName
       userName.textContent = doc.data().UserName;
-      datePost.textContent = doc.data().Date;
-      postContent.textContent = doc.data().text;
-      onePost.append(userName, datePost, postContent);
+      datePost.textContent = doc.data().date;
+      postContent.textContent = doc.data().Content;
+      onePost.append(userName, datePost, postContent, editButton, deleteButton);
 
       section.append(onePost);
     });
   });
-  section.append(p);
   return section;
 };
