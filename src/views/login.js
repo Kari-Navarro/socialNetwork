@@ -44,7 +44,7 @@ function login(navigateTo) {
     e.preventDefault();
     const emailValue = inputEmail.value;
     const passwordValue = inputPass.value;
-    const user = await loginUser(emailValue, passwordValue);
+    const user = loginUser(emailValue, passwordValue);
     if (user !== undefined) {
       navigateTo('/feed');
     } else {

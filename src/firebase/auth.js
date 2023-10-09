@@ -15,18 +15,13 @@ import { auth } from './firebase.js';
 const updateCurrentUser = async (completeUserName) => {
   await updateProfile(auth.currentUser, { displayName: completeUserName });
 };
-
 // Funcion para crear nuevos usurios, recibe email y contraseña
 const signUpUser = async (email, password) => { // aqui va username
   try {
     // Invocamos al servicio de firebase
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password,
-    );
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     updateCurrentUser(email); // aqui pasamos username
-    localStorage.setItem('user', userCredential.user);
+    localStorage.setItem('user', JSON.stringify(userCredential.user));
 
     return userCredential;
   } catch (error) {
@@ -43,6 +38,7 @@ const signUpUser = async (email, password) => { // aqui va username
     return undefined;
   }
 };
+
 const loginUser = async (email, password) => {
   try {
     // Invocamos el servicio de firebase
@@ -51,7 +47,7 @@ const loginUser = async (email, password) => {
       email,
       password,
     );
-    localStorage.setItem('user', userCredential.user);
+    localStorage.setItem('user', JSON.stringify(userCredential.user));
     return userCredential;
   } catch (error) {
     if (error.code === 'auth/wrong-password') {
@@ -73,7 +69,7 @@ const loginWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     // Invocamos el modal de iniciar sesion con google
     const userCredential = await signInWithPopup(auth, provider);
-    localStorage.setItem('user', userCredential);
+    localStorage.setItem('user', JSON.stringify(userCredential));
     return userCredential;
   } catch (error) {
     if (error.code === 'auth/wrong-password') {
@@ -112,48 +108,11 @@ const signOutUser = async () => {
     await signOut(auth);
     return localStorage.removeItem('user');
   } catch (error) {
-    return alert('Something wrong happened, please try again.');
+    return alert('Something wrong happened, please try again.'); // eslint-disable-line no-alert
   }
   // termina función de cierre de sesión
 };
 
-/* const updateOutput = (outputElement, message) => {
-  if (outputElement) {
-    outputElement.textContent = message;
-  }
-}; */
-
-// funcion que comparito el coach
-// Importa Firebase y configura la inicialización
-// const firebase = require("firebase");
-// const firebaseConfig = {
-//   apiKey: "TU_API_KEY",
-//   authDomain: "TU_DOMINIO.firebaseapp.com",
-//   databaseURL: "https://TU_DOMINIO.firebaseio.com",
-//   projectId: "TU_PROYECTO_ID",
-//   storageBucket: "TU_BUCKET.appspot.com",
-//   messagingSenderId: "TU_MENSAJERÍA_SENDER_ID",
-//   appId: "TU_APP_ID"
-// };
-// firebase.initializeApp(firebaseConfig);
-
-// // Autenticación del usuario (puedes usar diferentes métodos aquí)
-// const user = firebase.auth().currentUser;
-
-// // Actualizar el nombre del usuario
-// if (user) {
-//   user.updateProfile({
-//     displayName: "NuevoNombre"
-//   })
-//   .then(function() {
-//     // Actualización exitosa
-//     console.log("Nombre de usuario actualizado con éxito");
-//   })
-//   .catch(function(error) {
-//     // Error en la actualización
-//     console.error("Error al actualizar el nombre de usuario:", error);
-//   });
-// }
 export {
   signUpUser,
   loginUser,
