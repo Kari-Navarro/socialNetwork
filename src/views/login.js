@@ -11,7 +11,6 @@ function login(navigateTo) {
   buttonReturn.classList.add('buttonReturnLogin');
   const form = document.createElement('form');
   form.id = 'loginForm';
-  // form.setAttribute('method', 'POST');
   form.classList.add('formLogin');
   const inputEmail = document.createElement('input');
   inputEmail.classList.add('inputEmailLogin');

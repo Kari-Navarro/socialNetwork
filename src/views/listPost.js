@@ -10,14 +10,14 @@ export const ListPots = () => {
   const q = query(collection(db, 'Post'));
   onSnapshot(q, (querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      const onePost = document.createElement('section'); // sección individual post, para formato
-      onePost.className += 'individual-post'; // asigna clase a posts individuales
+      const onePost = document.createElement('section');
+      onePost.className += 'individual-post';
 
       const datePost = document.createElement('p');
-      datePost.classList.add('date-post'); // fecha del post (cambiar formato)
+      datePost.classList.add('date-post');
       const postContent = document.createElement('p');
-      postContent.classList.add('post-content'); // contenido del post
-      const userName = document.createElement('p'); // usuario que crea el post
+      postContent.classList.add('post-content');
+      const userName = document.createElement('p');
       userName.classList.add('user-name');
       const editButton = document.createElement('button');
       editButton.textContent = 'Edit';
