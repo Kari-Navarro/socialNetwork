@@ -1,7 +1,7 @@
 // file home.js
 import logo from './logo.png';
 
-function home(navigateTo) {
+function home(navigateTo, userSession) {
   const section = document.createElement('section');
   section.classList.add('sectionHome');
   const div = document.createElement('div');
