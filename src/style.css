@@ -316,8 +316,7 @@ body {
   font-weight: normal;
 }
 
-.button-register,
-.submitButton {
+.button-register {
   grid-column: 1;
   grid-row: 4;
   background-color: #F4D160;
@@ -390,24 +389,12 @@ body {
     font-size: 1em;
   }
 
-  .submitButton {
-    width: 30%;
-    height: 20%;
-    font-size: 1em;
-  }
   .btnOut {
     width: 30%;
     height: 40%;
     font-size: 1em; 
     margin-left: 70%;
   }
-
-  .submitButton {
-    width: 30%;
-    height: 20%;
-    font-size: 1em;
-  }
-
 
   .buttonReturnRegister {
     width: 120px;
@@ -456,7 +443,7 @@ body {
   }
 
   /*Boton del feed*/
-  .submitButton {
+  .submitButtonFeed{
     width: 100px;
     height: 20%;
     font-size: 1em;
@@ -508,26 +495,13 @@ body {
     font-size: 1.1em;
     margin-left: 15%
   }
-  .submitButton {
-height: 1em;
-width: 20%;
-font-size: 1em;
-margin-left: 80%;
-  }
-
-  .submitButton {
+  .submitButtonFeed {
     height: 1em;
     width: 20%;
     font-size: 1em;
     margin-left: 80%;
   }
 
-  .submitButton {
-    height: 1em;
-    width: 20%;
-    font-size: 1em;
-    margin-left: 80%;
-  }
   .btnOut {
     height: 2em;
     width: 20%;
@@ -976,7 +950,7 @@ margin-left: 80%;
   text-align: center;
 }
 
-.buttonSubmit {
+.buttonSubmitDogForm {
   grid-column: 1/3;
   background-color: #F4D160;
   color: rgb(0, 0, 0);
@@ -1076,7 +1050,7 @@ margin-left: 80%;
     width: 50%;
   }
 
-  .buttonSubmit {
+  .buttonSubmitDogForm {
     height: 35px;
     width: 60%;
     font-size: x-large;
@@ -1121,7 +1095,7 @@ margin-left: 80%;
   .inputWeight,
   .inputWeight::placeholder,
   .radio,
-  .buttonSubmit,
+  .buttonSubmitDogForm,
   .buttonReturnDog {
     font-size: large;
   }
@@ -1137,7 +1111,7 @@ margin-left: 80%;
 
   }
 
-  .buttonSubmit {
+  .buttonSubmitDogForm {
     height: 35px;
     width: 60%;
 
@@ -1154,3 +1128,25 @@ margin-left: 80%;
 
 
 /*aqui terminamos el Dogform*/
+
+/*aqui empiezan los estilos de feed*/
+
+.submitButtonFeed {
+  grid-column: 1;
+  grid-row: 4;
+  background-color: #F4D160;
+  color: rgb(0, 0, 0);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+  box-shadow: 0 6px 0 #F7C82E;
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+
+
+/*aqui terminan los estilos de feed*/
