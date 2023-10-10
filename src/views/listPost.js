@@ -31,9 +31,8 @@ export const ListPots = () => {
       deleteButton.addEventListener('click', () => {
         deletePost(doc, section, onePost);
       });
-
       userName.textContent = doc.data().UserName;
-      datePost.textContent = doc.data().date;
+      datePost.textContent = new Date(doc.data().date.seconds * 1000).toLocaleString();
       postContent.textContent = doc.data().Content;
       onePost.append(userName, datePost, postContent, editButton, deleteButton);
 

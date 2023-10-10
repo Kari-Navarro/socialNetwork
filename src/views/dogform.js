@@ -30,7 +30,7 @@ function dogRegister(navigateTo) {
 
   const buttonSubmit = document.createElement('button');
   buttonSubmit.setAttribute('type', 'submit');
-  buttonSubmit.classList.add('buttonSubmit');
+  buttonSubmit.classList.add('buttonSubmitDogForm');
 
   const dogForm = document.createElement('form');
   dogForm.classList.add('dogForm');
