@@ -13,7 +13,7 @@ function post(navigateTo) {
   const submitButton = document.createElement('button');
   submitButton.classList.add('submitButtonFeed');
   submitButton.setAttribute('type', 'button');
-  submitButton.textContent = 'Submit';
+  submitButton.textContent = 'Share';
   let textareaValue = '';
   textarea.addEventListener('keyup', (e) => {
     textareaValue = e.target.value;

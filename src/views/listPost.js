@@ -9,10 +9,10 @@ export const ListPots = () => {
 
   const q = query(collection(db, 'Post'));
   onSnapshot(q, (querySnapshot) => {
+    section.innerHTML = '';
     querySnapshot.forEach((doc) => {
       const onePost = document.createElement('section');
       onePost.className += 'individual-post';
-
       const datePost = document.createElement('p');
       datePost.classList.add('date-post');
       const postContent = document.createElement('p');
@@ -21,8 +21,10 @@ export const ListPots = () => {
       userName.classList.add('user-name');
       const editButton = document.createElement('button');
       editButton.textContent = 'Edit';
+      editButton.classList.add('btn-edit-listpost');
       const deleteButton = document.createElement('button');
       deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('btn-delete-listpost');
       let editView = null;
       editButton.addEventListener('click', () => {
         editView = editPost(doc);

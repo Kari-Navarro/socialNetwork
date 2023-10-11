@@ -1,4 +1,4 @@
-function navBar(navigateTo) {
+/* function navBar(navigateTo) {
   const barBox = document.createElement('section');
   barBox.classList.add('barBox');
   const feedButton = document.createElement('button');
@@ -27,4 +27,4 @@ function navBar(navigateTo) {
   return barBox;
 }
 
-export default navBar;
+export default navBar; */
