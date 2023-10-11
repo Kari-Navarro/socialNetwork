@@ -11,27 +11,6 @@ body {
   background-color: #f7ecba !important;
 }
 
-#section-listpost {
-  display: grid;
-  width: 100%;
-  height: 400%;
-  margin: 0 auto;
-  padding: 20%;
-  border: 1px solid green;
-  justify-content: space-between;
-  grid-template-rows: 100px;
-  grid-template-columns: auto auto;
-}
-.individual-post{
-  width: 100%;
-  height: 90%;
-  border: 1px solid black;
-  text-align: center;
-  line-height: 150px;
-}
-.post-content {
-  grid-column: 1/2;
-}
 #root {
   display: flex;
   justify-content: center;
@@ -112,25 +91,7 @@ body {
   box-shadow: none;
   transform: translateY(6px);
 }
-.textarea{
-  width: 100%;
-  height: 70px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
-}
-.btnOut {
-  background-color: #1D5D9B;
-  border: none;
-  outline: none;
-  border-radius: .5em;
-  cursor: pointer;
-  transition: .7s;
-}
+
 
 /*De 0 a 768px dispositivos moviles para el HOME*/
 @media (max-width: 767px) {
@@ -198,11 +159,17 @@ body {
     justify-self: center;
   }
 
-  .btn-register {
+  .btn-register{
     height: 2em;
     width: 6em;
     font-size: 1.5em;
   }
+
+  /*.submitButtonFeed {
+    height: 2em;
+    width: 6em;
+    font-size: 1.5em;
+  }*/
 
   .btn-login {
     height: 2em;
@@ -217,8 +184,7 @@ body {
 
 
 /*Aqui empiezan los estilos para el register*/
-.logoRegister,
-.logoFeed {
+.logoRegister {
   grid-row: 1;
   grid-column: 1;
   width: 50%;
@@ -389,13 +355,7 @@ body {
     font-size: 1em;
   }
 
-  .btnOut {
-    width: 30%;
-    height: 40%;
-    font-size: 1em; 
-    margin-left: 70%;
-  }
-
+ 
   .buttonReturnRegister {
     width: 120px;
     font-size: 1em;
@@ -447,14 +407,9 @@ body {
     width: 100px;
     height: 20%;
     font-size: 1em;
-    margin-left: 87%
+    /*margin-left: 87%*/
   }
-  .btnOut {
-    width: 100px;
-    height: 30%;
-    font-size: 1em;
-    margin-left: 87%
-  }
+ 
 
   .buttonReturnRegister {
     width: 200px;
@@ -497,18 +452,11 @@ body {
   }
   .submitButtonFeed {
     height: 1em;
-    width: 20%;
+    width: 100%;
     font-size: 1em;
-    margin-left: 80%;
   }
 
-  .btnOut {
-    height: 2em;
-    width: 20%;
-    font-size: 1em;
-    margin-left: 80%;
-  }
-
+  
   .buttonReturnRegister {
     height: 2em;
     font-size: 1.1em;
@@ -520,9 +468,7 @@ body {
 
 
 /*aqui empezamos los estilos del login*/
-.sectionFeed {
-  background-color: #ffffff;
-}
+
 .sectionLogin {
   background-image: url(./views/chihuahua.jpg);
   background-position: center center;
@@ -535,27 +481,7 @@ body {
   height: 100%;
 }
 
-.sectionFeed {
-  background-position: center center;
-  background-size: cover;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 35% 10% 20% 10% 25%;
-  justify-items: center;
-  width: 100%;
-  height: 100%;
-}
 
-.sectionFeed {
-  background-position: center center;
-  background-size: cover;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 35% 10% 20% 10% 25%;
-  justify-items: center;
-  width: 100%;
-  height: 100%;
-}
 .logoLogin {
   grid-row: 1;
   width: 70%;
@@ -698,6 +624,13 @@ body {
 
 /*De 769px (tabletas) hasta 1024px (computadoras medianas)para el LOGIN*/
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .submitButtonFeed {
+    height: 1em;
+    width: 100%;
+    font-size: 1em;
+  }
+
   .logoLogin {
     width: 50%;
     height: 100%;
@@ -757,6 +690,8 @@ body {
   .sectionFeed {
     max-width: 600px;
     width: 100%;
+    height: auto;
+
   }
 
   .logoLogin {
@@ -1064,6 +999,7 @@ body {
   }
 }
 
+
 /*De 1025px (computadora mediana hasta de escritorio)para eL DOGFORM**/
 @media (min-width: 1025px) {
   .section-dogform {
@@ -1081,8 +1017,6 @@ body {
     width: 40%;
     margin-left: 10%;
   }
-
-
 
   .inputId,
   .inputId::placeholder,
@@ -1130,12 +1064,72 @@ body {
 /*aqui terminamos el Dogform*/
 
 /*aqui empiezan los estilos de feed*/
+.sectionFeed {
+  background-image: url(./views/imgfeed.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 30% 5% auto auto;
+  width: 100%;
+  gap: 3%;
+}
+
+.logoFeed {
+  grid-row: 1;
+  grid-column: 1/3;
+  width: 35%;
+  height: 100%;
+  justify-self: center;
+ 
+  
+}
+
+.btnOut {
+  grid-row: 2;
+  grid-column: 2/3;
+  width: 50%;
+  background-color: #1D5D9B;
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+  box-shadow: 0 6px 0 #1D5D9B;
+  color:whitesmoke;
+  margin-left: 40%;
+}
+
+.btnOut:active{
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+.sectionPost{
+  grid-column: 1/3;
+  grid-row: 3;
+  justify-content: center;
+  display:grid;
+ }
+
+.textarea{
+  width: 100%;
+  height: 70px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
 
 .submitButtonFeed {
   grid-column: 1;
-  grid-row: 4;
   background-color: #F4D160;
-  color: rgb(255, 255, 255);
+  color: black;
   height: 35px;
   border: none;
   outline: none;
@@ -1147,6 +1141,171 @@ body {
   padding-right: 30px
 }
 
+.submitButtonFeed:active{
+  box-shadow: none;
+  transform: translateY(6px);
+}
 
 
+#section-listpost {
+  grid-row:4;
+  grid-column: 1/3;
+  padding-top:5%;
+  display:grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+
+.btn-edit-listpost{
+  grid-row: 4;
+  margin-left: 45%;
+  background-color: #F4D160;
+  box-shadow: 0 6px 0 #F7C82E;
+  width: 50%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+ }
+
+.btn-edit-listpost:active {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+  
+
+.btn-delete-listpost{
+  grid-row: 4;
+  margin-left: 10%;
+  width: 50%;
+  height: 100%;
+  background-color: #b9b4b4;
+  box-shadow: 0 6px 0 #888682;
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+}
+
+.btn-delete-listpost:active{
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+.individual-post{
+  height: 50%;
+  width: 300px;
+  text-align: center;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  margin-bottom: 10%;
+   }
+
+.user-name{
+  border-top-right-radius: .5em;
+  border-top-left-radius: .5em;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  grid-column: 1/3;
+  align-self: center;
+  background-color:#ffffff;
+}
+.date-post{
+  grid-column: 1/3;
+  background-color:#ffffff;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #030303;
+  }
+.post-content{
+  padding: 10% 10% 10% 10%;
+  grid-column: 1/3;
+  border-top: 1px solid rgb(0, 0, 0);
+  background-color:#ffffff;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  border-bottom: 2px solid #030303;
+  border-left: 2px solid #050505;
+  border-right: 2px solid #000000;
+}
+
+.dialog{
+  width: 50%;
+  height: 30%;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #fff;
+  /*display:grid;
+  grid-template-rows: 40% 60%;
+  grid-template-columns: 50% 50%;*/
+}
+.question{
+  grid-column: 1/3;
+  text-align: center;
+  height: 50px;
+}
+.container-btns{
+  grid-row:2;
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  height: 70%
+  }
+
+.yes-btn{
+
+  background-color: #b9b4b4;
+  box-shadow: 0 6px 0 #a5a4a3;
+  width: 40%;
+  height: 20%;
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+}
+
+.cancel-btn{
+ 
+  background-color: #b9b4b4;
+  box-shadow: 0 6px 0 #a5a4a3;
+  width: 40%;
+  height: 20%;
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+  
+}
+
+.editSection{
+  z-index: 50;
+  background-color: #858280ae;
+}
+.saveButton{
+  margin-left: 45%;
+  background-color: #F4D160;
+  box-shadow: 0 6px 0 #F7C82E;
+  width: 50%;
+  height: 50%;
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  border-radius: .5em;
+  cursor: pointer;
+  transition: .7s;
+}
 /*aqui terminan los estilos de feed*/
