@@ -17,13 +17,13 @@ describe('post', () => {
 
   it('deberia pintar 1 post cuando hay 1 post en firestore', async () => {
     const sectionPost = post();
-    const submitButton = getByText(sectionPost, 'Submit');
+    const submitButton = getByText(sectionPost, 'Share');
     const textArea = getByPlaceholderText(sectionPost, 'Write your post here...');
 
     fireEvent.change(textArea, {
       target: { value: 'Este post es de nuestro test' },
     });
-    fireEvent(submitButton, new MouseEvent('click', {}));
+    fireEvent.click(submitButton, new MouseEvent('click', {}));
     expect(textArea.value).toBe('Este post es de nuestro test');
   });
 });

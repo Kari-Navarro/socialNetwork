@@ -39,17 +39,15 @@ function navigateTo(pathName) {
     }
     root.appendChild(route.component(navigateTo, userSession));
   } else {
-    navigateTo('/error');
+    navigateTo('/');
   }
 }
 onAuthStateChanged(auth, (user) => {
   const userData = localStorage.getItem('user');
   if (user && userData) {
-    // Si el usuario tiene una sesion iniciada, siempre lo mandaremos al feed
     userSession = user;
     navigateTo('/feed');
   } else {
-    // Si el usuario esta en /, /login, /recoverPassword o /signUp, lo dejamos en esa misma ruta
     userSession = undefined;
     navigateTo('./');
   }

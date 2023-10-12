@@ -7,7 +7,7 @@ describe('post', () => {
     const navigateTo = () => {};
     const postContent = post(navigateTo);
     const textarea = postContent.querySelector('.textarea');
-    const button = postContent.querySelector('.submitButton');
+    const button = postContent.querySelector('.submitButtonFeed');
     textarea.value = 'petsLife';
     expect(textarea).toBeTruthy();
     expect(button).toBeTruthy();
