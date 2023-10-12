@@ -13,7 +13,7 @@
   "scripts": {
     "htmlhint": "htmlhint dist/*.html ",
     "eslint": "",
-    "stylelint": "",
+    "stylelint":"stylelint --aei src/**/*.css",
     "pretest": "npm run htmlhint && npm run eslint && npm run stylelint",
     "test": "jest --env=jsdom --coverage --runInBand ",
     "dev": "vite dev src",
