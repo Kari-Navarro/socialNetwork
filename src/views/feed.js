@@ -1,5 +1,5 @@
 import logo from './logo.png';
-import navBar from './navigateBar.js';
+// import navBar from './navigateBar.js';
 import { signOutUser } from '../firebase/auth.js';
 import post from './post.js';
 import { ListPots } from './listPost.js';
@@ -19,7 +19,7 @@ function feed(navigateTo) {
   const btnOut = document.createElement('button');
   btnOut.setAttribute('type', 'button');
   btnOut.classList.add('btnOut');
-  btnOut.textContent = 'sing out';
+  btnOut.textContent = 'Log out';
 
   btnOut.addEventListener('click', (e) => {
     e.preventDefault();
@@ -30,8 +30,8 @@ function feed(navigateTo) {
   });
 
   sectionFeed.append(logoFeed, btnOut);
-  footer.appendChild(navBar(navigateTo));
-  sectionFeed.append(postView, ListPots(), footer);
+  // footer.appendChild(navBar(navigateTo));
+  sectionFeed.append(postView, ListPots());
   return sectionFeed;
 }
 export default feed;

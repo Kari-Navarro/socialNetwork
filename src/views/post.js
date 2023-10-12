@@ -2,7 +2,6 @@ import { collection, addDoc } from 'firebase/firestore';
 import { db, auth } from '../firebase/firebase';
 
 const pub = collection(db, 'Post');
-
 function post(navigateTo) {
   const user = auth.currentUser;
   const sectionPost = document.createElement('section');
@@ -10,10 +9,11 @@ function post(navigateTo) {
   const textarea = document.createElement('textarea');
   textarea.classList.add('textarea');
   textarea.placeholder = 'Write your post here...';
+
   const submitButton = document.createElement('button');
-  submitButton.classList.add('submitButton');
+  submitButton.classList.add('submitButtonFeed');
   submitButton.setAttribute('type', 'button');
-  submitButton.textContent = 'Submit';
+  submitButton.textContent = 'Share';
   let textareaValue = '';
   textarea.addEventListener('keyup', (e) => {
     textareaValue = e.target.value;

@@ -13,7 +13,6 @@ export const ListPots = () => {
     querySnapshot.forEach((doc) => {
       const onePost = document.createElement('section');
       onePost.className += 'individual-post';
-
       const datePost = document.createElement('p');
       datePost.classList.add('date-post');
       const postContent = document.createElement('p');
@@ -22,8 +21,10 @@ export const ListPots = () => {
       userName.classList.add('user-name');
       const editButton = document.createElement('button');
       editButton.textContent = 'Edit';
+      editButton.classList.add('btn-edit-listpost');
       const deleteButton = document.createElement('button');
       deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('btn-delete-listpost');
       let editView = null;
       editButton.addEventListener('click', () => {
         editView = editPost(doc);
@@ -32,9 +33,8 @@ export const ListPots = () => {
       deleteButton.addEventListener('click', () => {
         deletePost(doc, section, onePost);
       });
-
       userName.textContent = doc.data().UserName;
-      datePost.textContent = doc.data().date;
+      datePost.textContent = new Date(doc.data().date.seconds * 1000).toLocaleString();
       postContent.textContent = doc.data().Content;
       onePost.append(userName, datePost, postContent, editButton, deleteButton);
 

@@ -57,8 +57,8 @@ function login(navigateTo) {
 
   buttonGoogle.textContent = '';
   buttonGoogle.classList.add('button-google');
-  buttonGoogle.addEventListener('click', async () => {
-    // Invocamos a la función loginWithGoogle que abre el popup de Google
+  buttonGoogle.addEventListener('click', async (e) => {
+    e.preventDefault();
     const user = await loginWithGoogle();
     if (user !== undefined) {
       navigateTo('/feed');

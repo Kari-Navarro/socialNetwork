@@ -9,12 +9,14 @@ import {
   signOut,
   updateProfile,
 } from 'firebase/auth';
+
 import { auth } from './firebase.js';
 
 // Funcion para actualizar el usuario
 const updateCurrentUser = async (completeUserName) => {
   await updateProfile(auth.currentUser, { displayName: completeUserName });
 };
+
 // Funcion para crear nuevos usurios, recibe email y contraseña
 const signUpUser = async (email, password) => { // aqui va username
   try {
@@ -65,9 +67,8 @@ const loginUser = async (email, password) => {
 
 const loginWithGoogle = async () => {
   try {
-    // Inicializamos googleAuth
     const provider = new GoogleAuthProvider();
-    // Invocamos el modal de iniciar sesion con google
+
     const userCredential = await signInWithPopup(auth, provider);
     localStorage.setItem('user', JSON.stringify(userCredential));
     return userCredential;
