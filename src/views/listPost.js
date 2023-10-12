@@ -9,6 +9,7 @@ export const ListPots = () => {
 
   const q = query(collection(db, 'Post'));
   onSnapshot(q, (querySnapshot) => {
+    section.innerHTML = '';
     querySnapshot.forEach((doc) => {
       const onePost = document.createElement('section');
       onePost.className += 'individual-post';

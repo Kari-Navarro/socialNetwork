@@ -46,25 +46,16 @@ function navigateTo(pathName) {
 // Observador de la sesion del usuario, obtenemos primero el usuario y despues navegamos en la app
 onAuthStateChanged(auth, (user) => {
   const userData = localStorage.getItem('user');
-  const actualRoute = window.location.pathname;
   if (user && userData) {
     // Si el usuario tiene una sesion iniciada, siempre lo mandaremos al feed
     userSession = user;
     navigateTo('/feed');
-  } else if (
-    actualRoute === '/feed'
-    || actualRoute === '/recipes'
-    || actualRoute === '/workout'
-    || actualRoute === '/profile'
-  ) {
     // Si el usuario no tiene sesion iniciada
     // y quiere entrar a las rutas de la app, lo mandamos a login
-    userSession = undefined;
-    navigateTo('/login');
   } else {
     // Si el usuario esta en /, /login, /recoverPassword o /signUp, lo dejamos en esa misma ruta
     userSession = undefined;
-    navigateTo(actualRoute);
+    navigateTo('./');
   }
 });
 

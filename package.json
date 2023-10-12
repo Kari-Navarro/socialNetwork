@@ -15,7 +15,7 @@
     "eslint": "",
     "stylelint": "",
     "pretest": "npm run htmlhint && npm run eslint && npm run stylelint",
-    "test": "jest --coverage",
+    "test": "jest --env=jsdom --coverage --runInBand ",
     "dev": "vite dev src",
     "start": "npm run dev",
     "build": "vite build",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.19.4",
+    "@testing-library/dom": "^9.3.3",
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -44,6 +45,6 @@
   },
   "dependencies": {
     "firebase": "^10.3.1",
-    "firebase-tools": "^12.5.3"
+    "firebase-tools": "^12.6.2"
   }
 }
