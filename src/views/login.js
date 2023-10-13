@@ -43,12 +43,16 @@ function login(navigateTo) {
     e.preventDefault();
     const emailValue = inputEmail.value;
     const passwordValue = inputPass.value;
-    const user = loginUser(emailValue, passwordValue);
-    if (user !== undefined) {
-      navigateTo('/feed');
-    } else {
-      login.reset();
-    }
+    loginUser(emailValue, passwordValue).then((firebaseUser) => {
+      if (firebaseUser) {
+        navigateTo('/feed');
+      } else {
+        navigateTo('/register');
+      }
+    })
+      .catch(() => {
+        navigateTo('/');
+      });
   });
   buttonReturn.textContent = 'Return to home';
   buttonReturn.addEventListener('click', () => {
