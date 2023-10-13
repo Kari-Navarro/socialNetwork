@@ -23,11 +23,6 @@ function register(navigateTo) {
   inputPass.placeholder = 'Password';
   inputPass.type = 'password';
 
-  const inputUserName = document.createElement('input');
-  inputUserName.placeholder = 'Write your full name';
-  inputUserName.classList.add('inputUserName');
-  inputUserName.type = 'text';
-
   const logoRegister = document.createElement('img');
   logoRegister.src = logo;
   logoRegister.alt = 'logoRegister';
@@ -43,7 +38,7 @@ function register(navigateTo) {
   });
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    signUpUser(inputUserName.value, inputEmail.value, inputPass.value)
+    signUpUser(inputEmail.value, inputPass.value)
 
       .then((userCredential) => {
         const user = userCredential.user;
@@ -56,7 +51,6 @@ function register(navigateTo) {
       });
   });
   form.append(
-    inputUserName,
     inputEmail,
     inputPass,
     buttonRegister,

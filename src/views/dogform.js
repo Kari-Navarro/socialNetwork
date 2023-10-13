@@ -2,10 +2,6 @@ import imgDogForm from './img3.jpg';
 import logo from './logo.png';
 
 function dogRegister(navigateTo) {
-  // if (user.pet) {
-  //   navigateTo('/feed');
-  // } else {
-  // }
   const section = document.createElement('section');
   section.classList.add('section-dogform');
 
