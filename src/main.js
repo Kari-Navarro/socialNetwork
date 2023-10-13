@@ -44,12 +44,17 @@ function navigateTo(pathName) {
 }
 onAuthStateChanged(auth, (user) => {
   const userData = localStorage.getItem('user');
+  const actualRoute = window.location.pathname;
   if (user && userData) {
     userSession = user;
     navigateTo('/feed');
+  } else if (
+    actualRoute === './feed') {
+    userSession = undefined;
+    navigateTo('./login');
   } else {
     userSession = undefined;
-    navigateTo('./');
+    navigateTo(actualRoute);
   }
 });
 window.onpopstate = () => {
