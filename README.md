@@ -1,558 +1,236 @@
-# Creando una Red Social
+# **Welcome to PetsLife**
 
-## Índice.
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/q1w1RRx/Captura-de-pantalla-2023-10-12-180943.png" alt="Captura-de-pantalla-2023-10-12-180943" border="0"></a>
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Entrega](#7-entrega)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
-## 1. Preámbulo.
+This project centers around a social network called "PetsLife," designed to enable dog lovers to share their most special moments with their faithful friends. Additionally, it provides a platform to access valuable information shared by other users about adoptions, locations for sterilizations, and vaccinations.
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+The key features of PetsLife are as follows:
 
-![adem-ay-Tk9m_HP4rgQ-unsplash](https://user-images.githubusercontent.com/110297/135544666-4efa54f1-4ff6-4c4c-b398-6df04ef56117.jpg)
+🐶1. **Registration and Login:** Users can sign up and access the platform using their email address and a secure password.
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+🐶2. **Google Login:** For added convenience, we also offer the option to log in via Google.
 
-## 2. Resumen del proyecto.
+🐶3. **Pet Registration:** When registering with an email and password, users can add information about their pets, creating personalized profiles for their furry companions.
 
-En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
-Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
-salud, energías renovables, amantes de las [Empanadas](https://es.wikipedia.org/wiki/Empanada)
-o de los [Tacos de Canasta](https://es.wikipedia.org/wiki/Taco),
-de la [Feijoada](https://es.wikipedia.org/wiki/Feijoada), o de lo que sea.
+🐶4. **Content Posting:** Users have the ability to create, edit, and delete posts to share their experiences and anecdotes with their pets. This feature promotes interaction and a community around the shared passion for dogs.
 
-Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de acceso
-y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
+🐶5. **Logout:** Users can securely log out whenever they wish.
 
-Por lo tanto, en este proyecto construirás una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-[_responsive_](https://curriculum.laboratoria.la/es/topics/css/02-responsive) (con más de una vista / página)
-en la que podamos **leer y escribir datos**.
+🐶🦮🐩🐕‍🦺🐕 PetsLife 🐶🦮🐩🐕‍🦺🐕 Strives to be a welcoming and enriching space for dog lovers, providing opportunities to strengthen the connection with their pets and access crucial information for animal well-being. Join our community and share the love for dogs!
 
-### Los objetivos generales de este proyecto son los siguientes
 
-* Desarrollar una SPA con temática de red social
-* Aplicar los conceptos de responsividad en el desarrollo de las vistas (templates)
-* Implementar un router para la navegación entre las diferentes vistas de la aplicación
-* Emplear un servicio externo para la persistencia de datos de la aplicación
-* Crear una suite de pruebas unitarias que permitan testear código asíncrono
+# Contents
 
-Para lograr estos objetivos, deberás aprender y hacer uso de las siguientes
-herramientas o habilidades técnicas:
+🐶1. User Stories. 
 
-## 3. Objetivos de aprendizaje
+🐶2. App Names, Color Palette, Logo, and Photos Selection. 
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+🐶3. Final Logo, Name, and App Color Palette. 
 
-### HTML
+🐶4. Interviews and Surveys. 
 
-- [ ] **Uso de HTML semántico**
+🐶5. Prototypes. 
 
-  <details><summary>Links</summary><p>
+🐶6. Usability Testing. 
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+🐶7. Preview. 
 
-### CSS
+🐶8. General Features. 
 
-- [ ] **Uso de selectores de CSS**
+🐶9. Who Are the Users? 
 
-  <details><summary>Links</summary><p>
+🐶10. Objectives Regarding the Product. 
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
+🐶11. Technologies Used. 
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+🐶12. Testing. 
 
-  <details><summary>Links</summary><p>
+🐶13. Issues. 
 
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+🐶14. Code Review.
 
-- [ ] **Uso de flexbox en CSS**
+## 1. User Stories.
 
-  <details><summary>Links</summary><p>
+<a href="https://ibb.co/dfCQXC4"><img src="https://i.ibb.co/yNv8KvF/historias-de-usuario-social-network.png" alt="historias-de-usuario-social-network" border="0"></a>
 
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
+## 2. App Names, Color Palette, Logo, and Photos Selection.
 
-- [ ] **Uso de CSS Grid Layout**
+**App Name Proposals**
 
-  <details><summary>Links</summary><p>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/qdrXnNT/nombres-para-petslife.png" alt="nombres-para-petslife" border="0"></a>
 
-  * [A Complete Guide to Grid - CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-  * [Grids - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
-</p></details>
+**Color Palette Proposals**
 
-### Web APIs
+<a href="https://ibb.co/kxVRthy"><img src="https://i.ibb.co/L8DL3CP/propuestas-de-paletas-de-colores.png" alt="propuestas-de-paletas-de-colores" border="0"></a>
 
-- [ ] **Uso de selectores del DOM**
+**Logo Proposals**
 
-  <details><summary>Links</summary><p>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/dbgSrdj/propuesta-1-logos.png" alt="propuesta-1-logos" border="0"></a>
 
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/jwK6mFn/propuesta-2-logo.png" alt="propuesta-2-logo" border="0"></a>
 
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+**Photos Selection for the App**
 
-  <details><summary>Links</summary><p>
+<a href="https://ibb.co/255Nj3L"><img src="https://i.ibb.co/zNNJSVL/fotos-para-app.png" alt="fotos-para-app" border="0"></a>
 
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
+## 3. Final Logo, Name, and App Color Palette.
 
-- [ ] **Manipulación dinámica del DOM**
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/q1w1RRx/Captura-de-pantalla-2023-10-12-180943.png" alt="Captura-de-pantalla-2023-10-12-180943" border="0"></a>
 
-  <details><summary>Links</summary><p>
+<a href="https://ibb.co/ngpcG9K"><img src="https://i.ibb.co/ZL98j5b/PALETA-1.jpg" alt="PALETA-1" border="0"></a>
 
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
 
-- [ ] **Ruteado (History API, evento hashchange, window.location)**
+## 4. Interviews and Surveys
 
-  <details><summary>Links</summary><p>
+<a href="https://ibb.co/kgXXCkr"><img src="https://i.ibb.co/TBtt3pn/encuesta-1.png" alt="encuesta-1" border="0"></a>
+<a href="https://ibb.co/5jTKJZz"><img src="https://i.ibb.co/rpkdX9L/encuesta-2.png" alt="encuesta-2" border="0"></a>
+<a href="https://ibb.co/vZvqCQy"><img src="https://i.ibb.co/Pwzjs9X/encuesta-3.png" alt="encuesta-3" border="0"></a>
+<a href="https://ibb.co/HgRvcQZ"><img src="https://i.ibb.co/PCJp28k/encuesta-4.png" alt="encuesta-4" border="0"></a>
+<a href="https://ibb.co/1nHWkRL"><img src="https://i.ibb.co/3stZnS7/encuesta-5.png" alt="encuesta-5" border="0"></a>
+<a href="https://ibb.co/FBkK5SQ"><img src="https://i.ibb.co/THDk4VQ/encuesta-6.png" alt="encuesta-6" border="0"></a>
+<a href="https://ibb.co/WychJqF"><img src="https://i.ibb.co/9TqD5z2/encuesta-7.png" alt="encuesta-7" border="0"></a>
 
-  * [Manipulando el historial del navegador - MDN](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-</p></details>
+## 5. Prototypes.
 
-### JavaScript
+- Low-Fidelity Mobile Prototype.
 
-- [ ] **Arrays (arreglos)**
+<a href="https://ibb.co/cbyGNfT"><img src="https://i.ibb.co/5Y1N5pc/prototipo-de-baja-fidelidad-petslife.png" alt="prototipo-de-baja-fidelidad-petslife" border="0"></a>
 
-  <details><summary>Links</summary><p>
+- High-Fidelity Mobile Prototype.
 
-  * [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
+<a href="https://ibb.co/fG5L16n"><img src="https://i.ibb.co/h1jw7QZ/prototipo-de-alta-fidelidad-petslife.png" alt="prototipo-de-alta-fidelidad-petslife" border="0"></a>
 
-- [ ] **Objetos (key, value)**
+## 6. Usability Testing.
 
-  <details><summary>Links</summary><p>
+🐶User 1: Argued that in each view of the application, an image related to the theme should be included because the white background gave it a rather simplistic appearance. (1 user mentioned this).
 
-  * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
-</p></details>
+🐶Users: They were asked to complete the tasks in the application and then share their opinions based on their experience. This user stated that the application was easily accessible and that the required actions were clear. (4 users agreed).
 
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
+## 7. Preview.
 
-- [ ] **Variables (declaración, asignación, ámbito)**
+## **Demo**
 
-  <details><summary>Links</summary><p>
+**Mobile Images**
 
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
+<a href="https://ibb.co/QbdsbVP"><img src="https://i.ibb.co/ngChgy7/Screen-Shot-2023-10-12-at-16-14-03.png" alt="Screen-Shot-2023-10-12-at-16-14-03" border="0"></a>
+<a href="https://ibb.co/9vpkNPF"><img src="https://i.ibb.co/n0wNbpH/register-nuevo-mobile.png" alt="register-nuevo-mobile" border="0"></a>
+<a href="https://ibb.co/PQ3rfPy"><img src="https://i.ibb.co/4d9F5XL/Screen-Shot-2023-10-12-at-16-18-27.png" alt="Screen-Shot-2023-10-12-at-16-18-27" border="0"></a>
+<a href="https://ibb.co/2kCbnsq"><img src="https://i.ibb.co/5RS7MnT/Screen-Shot-2023-10-12-at-16-14-11.png" alt="Screen-Shot-2023-10-12-at-16-14-11" border="0"></a>
+<a href="https://ibb.co/MRZFD4V"><img src="https://i.ibb.co/JzmDR47/Screen-Shot-2023-10-12-at-16-15-33.png" alt="Screen-Shot-2023-10-12-at-16-15-33" border="0"></a>
 
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+**Tablet Images**
 
-  <details><summary>Links</summary><p>
+<a href="https://ibb.co/rH4LNTN"><img src="https://i.ibb.co/qpk4VXV/Screen-Shot-2023-10-12-at-16-15-56.png" alt="Screen-Shot-2023-10-12-at-16-15-56" border="0"></a>
+<a href="https://ibb.co/HLSMvHb"><img src="https://i.ibb.co/5X0zDRS/register-tablet-nuevo.png" alt="register-tablet-nuevo" border="0"></a>
+<a href="https://ibb.co/G0vcSmR"><img src="https://i.ibb.co/xDSJTZ6/Screen-Shot-2023-10-12-at-16-16-21.png" alt="Screen-Shot-2023-10-12-at-16-16-21" border="0"></a>
+<a href="https://ibb.co/dQHF9Ym"><img src="https://i.ibb.co/y8xtTj4/Screen-Shot-2023-10-12-at-16-16-33.png" alt="Screen-Shot-2023-10-12-at-16-16-33" border="0"></a>
+<a href="https://ibb.co/3TTjZzK"><img src="https://i.ibb.co/ZffFDm9/Screen-Shot-2023-10-12-at-16-18-03.png" alt="Screen-Shot-2023-10-12-at-16-18-03" border="0"></a>
 
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
+**Web Images**
 
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
+<a href="https://ibb.co/h2ZyQ6j"><img src="https://i.ibb.co/qmWdqSf/Screen-Shot-2023-10-12-at-16-21-55.png" alt="Screen-Shot-2023-10-12-at-16-21-55" border="0"></a>
+<a href="https://ibb.co/hRzQS96"><img src="https://i.ibb.co/GvSYqp6/register-web-nuevo.png" alt="register-web-nuevo" border="0"></a>
+<a href="https://ibb.co/d03bFmG"><img src="https://i.ibb.co/7JTgPk2/Screen-Shot-2023-10-12-at-16-22-24.png" alt="Screen-Shot-2023-10-12-at-16-22-24" border="0"></a>
+<a href="https://ibb.co/6ykT35W"><img src="https://i.ibb.co/RgqsxWD/Screen-Shot-2023-10-12-at-16-22-37.png" alt="Screen-Shot-2023-10-12-at-16-22-37" border="0"></a>
+<a href="https://ibb.co/hCVst7K"><img src="https://i.ibb.co/yVq0bf8/Screen-Shot-2023-10-12-at-16-23-07.png" alt="Screen-Shot-2023-10-12-at-16-23-07" border="0"></a>
 
-  <details><summary>Links</summary><p>
+**Mobile Video**
 
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
+<div>
+    <a href="https://www.loom.com/share/435e2a94a41c424498e002f4cb45c340">
+    <a href="https://www.loom.com/share/435e2a94a41c424498e002f4cb45c340">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/435e2a94a41c424498e002f4cb45c340-with-play.gif">
+    </a>
+  </div>
+<br>
 
-- [ ] **Funciones (params, args, return)**
+**Web Video**
 
-  <details><summary>Links</summary><p>
+<div>
+    <a href="https://www.loom.com/share/a285c9897c2d498a99553a78f73ac730">
+    </a>
+    <a href="https://www.loom.com/share/a285c9897c2d498a99553a78f73ac730">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a285c9897c2d498a99553a78f73ac730-with-play.gif">
+    </a>
+  </div>
 
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
 
-- [ ] **Pruebas unitarias (unit tests)**
 
-  <details><summary>Links</summary><p>
+## 8. General Features.
 
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
+🐶This is a Single Page Application (SPA) consisting of various views, such as the home page (Home), registration (Register), login (Login), the dog registration form (Dogform), and the feed.
 
-- [ ] **Pruebas asíncronas**
+🐶We utilized Firebase, a platform primarily designed to simplify web and mobile application development, enabling more efficient work without compromising the required quality.
 
-  <details><summary>Links</summary><p>
+🐶It leverages Firestore, our cloud-based NoSQL database, to store and synchronize data in a flexible and scalable manner. This facilitates development from both the client and server sides, ensuring efficient and reliable data management for the application.
 
-  * [Tests de código asincrónico con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/asynchronous)
-</p></details>
+## 9. Who Are the Users?
 
-- [ ] **Uso de mocks y espías**
+This project is aimed at dog lovers, the "best friends of humans," including dogs of all breeds and sizes.🐶🐕🐕‍🦺🐩🦮
 
-  <details><summary>Links</summary><p>
+## 10. Product Goals.
 
-  * [Manual Mocks con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/manual-mocks)
-</p></details>
+🐶The primary purpose of this product is to allow users to share their best moments with their dogs while also providing valuable information about adoptions, sterilization, and vaccinations. This information is currently available exclusively for Mexico and Chile.
 
-- [ ] **Módulos de ECMAScript (ES Modules)**
+## 11. Technologies Used
 
-  <details><summary>Links</summary><p>
+🐶**JavaScript:** Used to execute web functionality and display the results. 
 
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
+🐶**HTML5:** Employed to render the app through a div that behaved like a node, allowing us to observe all elements created from JavaScript (inputs, buttons, text boxes, etc.).
 
-- [ ] **Uso de linter (ESLINT)**
+🐶**CSS3** (_@mediaquery_): Determines the style and design of our application, including responsive design. Media queries were used in this project for designing on mobile phones, tablets, and desktop computers. 
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+🐶**GitHub:** This technology's utility was for storing the repository and facilitating collaborative work. 
 
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+🐶**Git:** Provided version control support. 
 
-- [ ] **Callbacks**
+🐶**Node.js:** Used as the runtime environment for JavaScript. 
 
-  <details><summary>Links</summary><p>
+🐶**Jest:** Unit tests were performed using this technology, as it allowed for mocks to simulate Firebase methods and test the functions developed by the team. Additionally, it provided a report to assess code quality. 
 
-  * [Función Callback - MDN](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
-</p></details>
+🐶**Firebase:** Different Firebase methods were used to enable users to access the application. User registration was accomplished using _createUserWithEmailAndPassword_ and _signInWithPopup_. For the login view, _GoogleAuthProvider_ was used to allow logging in with Google credentials. Furthermore, _signInWithEmailAndPassword_ was employed for email login, and _onAuthStateChanged_ was used to monitor changes in user authentication status, with _signOut_ being used for logging out.
 
-- [ ] **Promesas**
+ 🐶**Firestore:** This technology allowed us to access a real-time NoSQL document database. Our collections focused on user-generated posts, so methods like _collection_ and _addDoc_ were used. The object requested user email properties, date, and content. 
 
-  <details><summary>Links</summary><p>
+🐶**SPA (Single Page Application):** In order to provide our users with a faster browsing experience, the design was based on a Single Page Application (SPA). 
 
-  * [Promise - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  * [How to Write a JavaScript Promise - freecodecamp (en inglés)](https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/)
-</p></details>
+🐶**Vercel:** Utilized to deploy the application directly from GitHub.
 
-### Control de Versiones (Git y GitHub)
+## 12. Testing
 
-- [ ] **Git: Instalación y configuración**
+- npm run pretest
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+<a href="https://ibb.co/vBLxsTt"><img src="https://i.ibb.co/wLpNJPv/npm-run-pretest.png" alt="npm-run-pretest" border="0"></a>
 
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+* npm test
 
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+<a href="https://ibb.co/r4qLZ4S"><img src="https://i.ibb.co/HnRMrns/npm-run-test-petslife.png" alt="npm-run-test-petslife" border="0"></a>
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+-  npm run open-coverage-report
 
-  <details><summary>Links</summary><p>
+<a href="https://ibb.co/dPJTZ03"><img src="https://i.ibb.co/3pY3Ky8/coverage-report-petslife.png" alt="coverage-report-petslife" border="0"></a>
 
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
+- Only in these two sections, the test did not pass.
 
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
+<a href="https://ibb.co/VNTHkJp"><img src="https://i.ibb.co/n0j3K68/no-pas-test-en-esta-parte-1.png" alt="no-pas-test-en-esta-parte-1" border="0"></a>
 
-- [ ] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
+<a href="https://ibb.co/R2D9BzB"><img src="https://i.ibb.co/XXCb3S3/no-pas-test-en-esta-parte-2.png" alt="no-pas-test-en-esta-parte-2" border="0"></a>
 
-### Centrado en el usuario
+## 13. Issues.
 
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
+**General Issues**
 
-### Diseño de producto
+🚨 Initially, there were issues with Firebase configuration.
 
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+🚨 There was a problem with CSS: views were being affected by responsiveness, and several elements needed to be designed. The background images did not fit correctly in the initial attempts. After reviewing Display Grid and delving deeper into responsive design, we were able to resolve it.
 
-- [ ] **Seguir los principios básicos de diseño visual**
+🚨 Problems with post duplication were encountered and resolved by adding a line in the onSnapshot function (section.innerHTML = '';).
 
-### Investigación
+🚨 Another issue was with the date; it was only displaying milliseconds and not the full date and time. The solution was to use this code: datePost.textContent = new Date(doc.data().date.seconds * 1000).toLocaleString(); This code was added to format the date properly.
 
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
+🚨 In the tests, there was an issue where the dialog was not recognized in the delete test. To resolve this problem, we had to implement the following functions: HTMLDialogElement.prototype.showModal = jest.fn(); HTMLDialogElement.prototype.close = jest.fn().
 
-  <details><summary>Links</summary><p>
+## 14. Code Review.
 
-  * [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
-  * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
-</p></details>
-
-### Firebase
-
-- [ ] **Firebase Auth**
-
-  <details><summary>Links</summary><p>
-
-  * [Primeros pasos con Firebase Authentication en sitios web - Documentación oficial](https://firebase.google.com/docs/auth/web/start?hl=es)
-  * [Administra usuarios en Firebase (onAuthStateChanged)](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
-</p></details>
-
-- [ ] **Firestore**
-
-  <details><summary>Links</summary><p>
-
-  * [Firestore - Documentación oficial](https://firebase.google.com/docs/firestore?hl=es)
-  * [Reglas de seguridad de Firestore - Documentación oficial](https://firebase.google.com/docs/rules?hl=es)
-  * [Obtén actualizaciones en tiempo real con Cloud Firestore - Documentación oficial](https://firebase.google.com/docs/firestore/query-data/listen?hl=es)
-</p></details>
-
-## 4. Consideraciones generales
-
-* Este proyecto se debe trabajar en equipos de tres.
-
-* El rango de tiempo estimado para completar el proyecto es de 4 a 5 Sprints.
-
-* La lógica del proyecto debe estar implementada completamente en JavaScript
-  (ES6+), HTML y CSS :smiley:. Para este proyecto **no está permitido** utilizar
-  _frameworks_ o librerías de CSS y JS.
-
-* La división y organización del trabajo debe permitir, sin excepciones, que
-  **cada integrante** del equipo practique el aprendizaje de todo lo involucrado
-  en **cada historia**. _No se dividan el trabajo como en una fábrica._
-  - ¿Hasta acá has avanzado en tus proyectos con cierta fluidez y sin mayores
-    problemas? Sé generosa con tus compañeras, permíteles aprender y practicar
-    sin restricciones, aunque tome un poco más de tiempo. Aproveha de
-    _coachearlas_, de hacer _pair programming_, una de las mejores maneras de
-    aprender es explicando verbalmente.
-
-  - ¿Se te está haciendo difícil y te cuesta un poco más avanzar? No te quedes
-    con las partes "fáciles" del proyecto, conversa, negocia, exige tu oportunidad
-    para practicar y aprender lo que se te hace más difícil.
-
-* Solamente pueden trabajar en una única historia por vez, no pueden avanzar a
-  la siguiente sin haber completado la anterior. La historia se completa cuando
-  se cumplen **todos** sus Criterios de Aceptación + **toda** su Definición
-  de Terminado.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-### 5.1 Boilerplate
-
-Este proyecto no incluye un _boilerplate_ completo, solo algunos archivos de
-configuración basico, así es que tendrás que definir la estructura de carpetas
-y escribir tus propias Pruebas Unitarias (_tests_). Para hacerlo, puedes guiarte
-de los proyectos anteriores y/o organizar los archivos siguiendo una estructura
-de [Modelo-Vista-Controlador](https://developer.mozilla.org/es/docs/Glossary/MVC).
-
-En este proyecto vamos a usar una herramienta llamada
-[Vite](https://es.vitejs.dev/) para empaquetar nuestros módulos y arrancar
-el servidor de desarrollo, el cual provee nuestros archivos utilizando
-la estrategia `Hot Module Replacement`
-[(HMR)](https://es.vitejs.dev/guide/features.html#hot-module-replacement),
-esto significa que cuando hagas cambios en los archivos que estén siendo
-servidos, el navegador automáticamente se actualizará sin tener que refrescar
-y volver a cargar todo el sitio. Debes tener especial cuidado de no tener
-ninguna _dependencia circular_ en tu código ya que
-[eso puede ocasionar problemas con HMR](https://es.vitejs.dev/guide/troubleshooting.html#ocurre-un-refresco-completo-en-lugar-de-hmr).
-(`eslint-plugin-import` tiene una regla
-[import/no-cycle](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-cycle.md)
-que va a avisar si las tiene.)
-
-### 5.2 Definición del producto
-
-En el `README.md` cuéntanos brevemente cómo descubriste las necesidades de los
-usuarios y cómo llegaste a la definición final de tu producto. Es importante
-que detalles:
-
-* Quiénes son los principales usuarios de producto.
-* Qué problema resuelve el producto / para qué le servirá a estos usuarios.
-
-### 5.3 Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarixs, escribe las Historias de
-Usuario que representen todo lo que necesitan hacer/ver en la Red Social. Cada
-una de tus Historias de Usuario debe tener:
-
-* **Criterios de Aceptación:** todo lo que debe ocurrir para satisfacer las
-  necesidades del usuario.
-
-* **Definición de terminado:** todos los aspectos técnicos que deben cumplirse
-  para que, como equipo, sepan que esa historia está terminada y lista
-  para publicarse. **Todas** tus Historias de Usuario (salvo excepciones), deben
-  incluir estos aspectos en su Definición de Terminado (más todo lo que
-  necesiten agregar):
-
-  - Debe ser una SPA.
-  - Debe ser _responsive_.
-  - Deben haber recibido _code review_ de al menos una compañera de otro equipo.
-  - Hicieron los _test_ unitarios
-  - Testearon manualmente buscando errores e imperfecciones simples.
-  - Hicieron _pruebas_ de usabilidad e incorporaron el _feedback_ de los
-    usuarios como mejoras.
-  - Desplegaron su aplicación y etiquetaron la versión (git tag).
-
-### 5.4 Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
-
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu aplicación
-y, con eso, diseña la Interfaz de Usuario (UI por sus siglas en inglés) que
-siga este flujo.
-
-### 5.5 Responsive
-
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (_tablets_, celulares, etc.). Te
-sugerimos seguir la técnica de _`mobile first`_ (más detalles sobre esta técnica
-al final).
-
-### 5.6 Consideraciones del comportamiento de la interfaz de usuario (UI)
-
-Estas consideraciones te ayudarán a escribir las Definiciones de Terminado de
-tus H.U.:
-
-#### Creación de cuenta de usuario e inicio de sesión
-
-* _Login_ con Firebase:
-  - Para el _login_ y las publicaciones en el muro puedes utilizar [Firebase](https://firebase.google.com/products/database/)
-  - Creación de cuenta de acceso y autenticación con cuenta de correo y
-    contraseña, y también con una cuenta de Google.
-* Validaciones:
-  - Solamente se permite el acceso a usuarios con cuentas válidas.
-  - No pueden haber usuarios repetidos.
-  - La cuenta de usuario debe ser un correo electrónico válido.
-  - Lo que se escriba en el campo (_input_) de contraseña debe ser secreto.
-* Comportamiento:
-  - Al enviarse el formulario de registro o inicio de sesión, debe validarse.
-  - Si hay errores, se deben mostrar mensajes descriptivos para ayudar al
-  usuario a corregirlos.
-
-#### Muro/timeline
-
-* Validaciones:
-  - Al publicar, se debe validar que exista contenido en el _input_.
-* Comportamiento:
-  - Al recargar la aplicación, se debe verificar si el usuario está _logueado_
-    antes de mostrar contenido.
-  - Poder publicar un _post_.
-  - Poder dar y quitar _like_ a una publicación. Máximo uno por usuario.
-  - Llevar un conteo de los _likes_.
-  - Poder eliminar un post específico.
-  - Pedir confirmación antes de eliminar un _post_.
-  - Al dar _click_ para editar un _post_, debe cambiar el texto por un _input_
-    que permita editar el texto y luego guardar los cambios.
-  - Al guardar los cambios debe cambiar de vuelta a un texto normal pero con la
-    información editada.
-  - Al recargar la página debo de poder ver los textos editados.
-
-### 5.7 Consideraciones técnicas Front-end
-
-* Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
-* Contar con múltiples vistas. Para esto, tu aplicación debe ser una
- [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-* Alterar y persistir datos. Los datos que agregues o modifiques deberán
-  persistir a lo largo de la aplicación. Te recomendamos que uses
-  [Firebase](https://firebase.google.com/) para eso también.
-
-#### Pruebas unitarias (unit tests)
-
-* Recuerda que no hay un _setup_ de **tests** definido, dependerá de
-  la estructura de tu proyecto. Algo que no debes de olvidar es pensar en éstas
-  pruebas, te pueden ayudar a definir la estructura y nomenclatura de tu lógica.
-
-* Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-  _lines_, y _branches_.
-
-### 5.8 Consideraciones técnicas UX
-
-* Hacer al menos 2 entrevistas con usuarios.
-* Hacer un  prototipo de baja fidelidad.
-* Asegurarte de que la implementación en código siga los lineamientos del
-  diseño.
-* Hacer sesiones de _testing de usabilidad_ con el producto en HTML.
-
-## 6. Hacker edition
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-* Permite crear posts con imágenes.
-* Permite buscar usuarios, agregar y eliminar "amigos".
-* Permite definir la privacidad de los _posts_ (público o solamente para amigos).
-* Permite ver su muro de cualquier usuario "no-amigo" (solamente los
-  posts _públicos_).
-* Permite comentar o responder una publicación.
-* Permite editar perfil.
-
-## 7. Entrega
-
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages u otro servicio de hosting
-(Firebase, Netlify, Vercel, etc) que puedas haber encontrado en el camino.
-Revisa la [documentación de Vite](https://vitejs.dev/guide/static-deploy.html)
-para guiarte con eso.
-
-***
-
-## 8. Pistas, tips y Lecturas complementarias
-
-Súmate al canal de Slack
-[#project-social-network](https://claseslaboratoria.slack.com/archives/C03SE63GFJQ)
-para conversar y pedir ayuda del proyecto.
-
-### Mobile first
-
-El concepto de [_mobile first_](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-hace referencia a un proceso de diseño y desarrollo donde partimos de cómo se ve
-y cómo funciona la aplicación en un dispositivo móvil primero, y más adelante se
-ve como adaptar la aplicación a pantallas progresivamente grandes y
-características específicas del entorno desktop. Esto es en contraposición al
-modelo tradicional, donde primero se diseñaban los websites (o webapps) para
-desktop y después se trataba de _arrugar_ el diseño para que entre en pantallas
-más chicas. La clave acá es asegurarse de que desde el principio diseñan usando
-la vista _responsive_ de las herramientas de desarrollador (developer tools) del
-navegador. De esa forma, partimos de cómo se ve y comporta la aplicación en una
-pantalla y entorno móvil.
-
-### Múltiples vistas
-
-En proyectos anteriores nuestras aplicaciones habían estado compuestas de una
-sola _vista_ principal (una sóla _página_). En este proyecto se introduce la
-necesidad de tener que dividir nuestra interfaz en varias _vistas_ o _páginas_
-y ofrecer una manera de navegar entre estas vistas. Este problema se puede
-afrontar de muchas maneras: con archivos HTML independientes (cada uno con su
-URL) y links tradicionales, manteniendo estado en memoria y rederizando
-condicionalmente (sin refrescar la página), [manipulando el historial del
-navegador](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-con [`window.history`](https://developer.mozilla.org/es/docs/Web/API/Window/history).
-En este proyecto te invitamos a explorar opciones y decidir una opción
-de implementación.
-
-### Escritura de datos
-
-En los proyectos anteriores hemos consumido (leído) datos, pero todavía no
-habíamos escrito datos (salvar cambios, crear datos, borrar, ...). En este
-proyecto tendrás que crear (salvar) nuevos datos, así como leer, actualizar y
-modificar datos existentes. Estos datos se podrán guardar de forma remota
-usando [Firebase](https://firebase.google.com/).
-
-Para usar Firebase hay que crear un proyecto en la consola de Firebase e
-instalar la dependencia `firebase` utilizando `npm`.
-Lee [las instrucciones paso a paso aqui](https://firebase.google.com/docs/web/setup).
-
-Otras:
-
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-* [Diseño web, responsive design y la importancia del mobile first - Media Click](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-* [Mobile First: el enfoque actual del diseño web móvil - 1and1](https://www.1and1.es/digitalguide/paginas-web/diseno-web/mobile-first-la-nueva-tendencia-del-diseno-web/)
-* [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
+🐶I consider that you work in an extremely organized manner. Your code looks clean and elegant, with specific variable declarations that are perfectly understandable thanks to the names you use. It's clear that you communicate effectively about what you are doing.
