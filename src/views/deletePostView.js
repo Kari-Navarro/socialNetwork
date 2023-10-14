@@ -3,27 +3,6 @@ import {
 } from 'firebase/firestore';
 
 function deletePost(doc, mainSection, currentPost) {
-  // const dialogContainer = document.createElement('div');
-  // dialogContainer.setAttribute('data-testid', 'dialogContainer');
-  // dialogContainer.innerHTML = `<dialog
-  //   data-testid="dialog"
-  //   id="deletePostDialog"
-  // >
-  //   <p>
-  //     Are you sure you want to delete this post?
-  //   </p>
-  //   <div>
-  //     <button id="deletePostYesButton">
-  //       Yes
-  //     </button>
-  //     <button
-  //     id="deletePostCancelButton"
-  //       class="cancel-button"
-  //     >
-  //       Cancel
-  //     </button>
-  //   </div>
-  // </dialog>`;
   const dialog = document.createElement('dialog');
   dialog.setAttribute('data-testid', 'dialog');
   dialog.classList.add('dialog');
